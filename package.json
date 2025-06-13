@@ -1,22 +1,14 @@
 {
-  "name": "@breeze/tree-sitter-parsers",
-  "version": "0.1.0",
-  "description": "Pre-compiled Tree-sitter parsers for 163 programming languages",
-  "main": "index.js",
+  "author": "",
   "bin": {
     "tree-sitter-parsers-path": "./bin/tree-sitter-parsers-path.js"
   },
-  "scripts": {
-    "postinstall": "node postinstall.js",
-    "build": "node build-grammars.js",
-    "build:all": "node build-grammars.js --all-platforms",
-    "fetch": "node build-grammars.js --fetch-only",
-    "compile": "node build-grammars.js --compile-only",
-    "create-packages": "node create-platform-packages.js",
-    "publish-all": "bash publish-packages.sh",
-    "test-distribution": "node test-distribution.js",
-    "test-distribution:x64": "node test-distribution.js --arch x64",
-    "test-distribution:arm64": "node test-distribution.js --arch arm64"
+  "description": "Pre-compiled Tree-sitter parsers for 163 programming languages",
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.6"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "files": [
     "index.js",
@@ -29,23 +21,34 @@
     "syntax",
     "ast"
   ],
-  "author": "",
   "license": "MIT",
+  "main": "index.js",
+  "name": "@breeze/tree-sitter-parsers",
+  "optionalDependencies": {
+    "@breeze/tree-sitter-parsers-darwin-arm64": "0.1.0",
+    "@breeze/tree-sitter-parsers-darwin-x64": "0.1.0",
+    "@breeze/tree-sitter-parsers-linux-arm64": "0.1.0",
+    "@breeze/tree-sitter-parsers-linux-arm64-musl": "0.1.0",
+    "@breeze/tree-sitter-parsers-linux-x64": "0.1.0",
+    "@breeze/tree-sitter-parsers-linux-x64-musl": "0.1.0",
+    "@breeze/tree-sitter-parsers-win32-arm64": "0.1.0",
+    "@breeze/tree-sitter-parsers-win32-x64": "0.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/casualjim/breeze-tree-sitter-parsers.git"
   },
-  "engines": {
-    "node": ">=20.0.0"
+  "scripts": {
+    "build": "node build-grammars.js",
+    "build:all": "node build-grammars.js --all-platforms",
+    "compile": "node build-grammars.js --compile-only",
+    "create-packages": "node create-platform-packages.js",
+    "fetch": "node build-grammars.js --fetch-only",
+    "postinstall": "node postinstall.js",
+    "publish-all": "bash publish-packages.sh",
+    "test-distribution": "node test-distribution.js",
+    "test-distribution:arm64": "node test-distribution.js --arch arm64",
+    "test-distribution:x64": "node test-distribution.js --arch x64"
   },
-  "optionalDependencies": {
-    "@breeze/tree-sitter-parsers-darwin-x64": "0.1.0",
-    "@breeze/tree-sitter-parsers-darwin-arm64": "0.1.0",
-    "@breeze/tree-sitter-parsers-linux-x64": "0.1.0",
-    "@breeze/tree-sitter-parsers-linux-arm64": "0.1.0",
-    "@breeze/tree-sitter-parsers-linux-x64-musl": "0.1.0",
-    "@breeze/tree-sitter-parsers-linux-arm64-musl": "0.1.0",
-    "@breeze/tree-sitter-parsers-win32-x64": "0.1.0",
-    "@breeze/tree-sitter-parsers-win32-arm64": "0.1.0"
-  }
+  "version": "0.1.0"
 }
