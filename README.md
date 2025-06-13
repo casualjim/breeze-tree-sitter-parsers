@@ -1,67 +1,90 @@
 # Breeze Tree-sitter Parsers
 
-This repository provides a collection of [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) parsers, compiled into statically linked binaries for multiple platforms. The main npm package, `@breeze/tree-sitter-parsers`, automatically pulls in the correct platform-specific binary as an optional dependency, making installation and usage seamless.
+Pre-compiled Tree-sitter parsers for 163 programming languages, distributed as native binaries via npm.
 
-## Features
+## Installation
 
-- 🚀 Multiple Tree-sitter parsers bundled together
-- 🛠️ Statically linked binaries for each supported platform (Linux, macOS, Windows, etc.)
-- 📦 Single npm package with platform-specific binaries as optional dependencies
-- 🔒 No runtime dependencies—just install and use
+```bash
+npm install @breeze/tree-sitter-parsers
+```
+
+The appropriate binary for your platform will be automatically downloaded during installation.
 
 ## Usage
 
-1. **Install the package:**
-
-   ```sh
-   npm install @breeze/tree-sitter-parsers
-   ```
-
-   The correct binary for your platform will be installed automatically.
-
-2. **Supported Platforms:**
-   - macOS (darwin)
-   - Linux (x64, arm64, etc.)
-   - Windows (win32)
-   - (More platforms can be added as needed)
-
-## Retrieving the Binary Path
-
-You can retrieve the path to the platform-specific binary for use in other build steps or scripts:
-
-### CLI
-
-```sh
-npx @breeze/tree-sitter-parsers --print-binary-path
-```
-
-This will print the absolute path to the binary for your platform.
-
-### Programmatic Usage
+### Get the binary path
 
 ```js
-const { getBinaryPath } = require('@breeze/tree-sitter-parsers');
-console.log(getBinaryPath());
+const { binaryPath, metadataPath } = require('@breeze/tree-sitter-parsers');
+
+console.log(binaryPath); // Path to the static library
+console.log(metadataPath); // Path to the grammars metadata JSON
 ```
 
-Use this in your build scripts to locate the binary as needed.
+### Command-line usage
 
-## How It Works
+```bash
+# Get the path to the binary
+npx tree-sitter-parsers-path
+```
 
-- The main package (`@breeze/tree-sitter-parsers`) declares platform-specific binaries as optional dependencies.
-- During installation, npm/yarn/pnpm will fetch the correct binary for your platform.
-- The package provides a CLI and API to retrieve the binary path for integration with other tools.
+### Build tools integration
 
-## Development
+The binary path can be used in build scripts:
 
-- Parsers are compiled using cross-compilation toolchains.
-- Each binary is statically linked to avoid external dependencies.
-- Platform-specific binaries are published as optional dependencies.
+```bash
+# In a build script
+PARSER_LIB=$(npx tree-sitter-parsers-path)
+gcc myapp.c $PARSER_LIB -o myapp
+```
 
-## Contributing
+## Supported Platforms
 
-Contributions are welcome! Please open issues or pull requests for new parsers, platform support, or improvements.
+- Linux x64 (glibc and musl)
+- Linux ARM64 (glibc and musl)  
+- macOS x64
+- macOS ARM64
+- Windows x64
+- Windows ARM64
+
+## Building from Source
+
+### Prerequisites
+
+- Node.js 18+
+- Git
+- Zig (for cross-compilation)
+- C/C++ compiler (for native builds)
+
+### Build Commands
+
+```bash
+# Clone the repository
+git clone https://github.com/casualjim/breeze-tree-sitter-parsers.git
+cd breeze-tree-sitter-parsers
+
+# Fetch all grammar repositories
+npm run fetch
+
+# Build for current platform
+npm run build
+
+# Build for all platforms (requires Zig)
+npm run build:all
+
+# Create npm packages for distribution
+npm run create-packages
+```
+
+## Architecture
+
+This project consists of:
+
+1. **Main package** (`@breeze/tree-sitter-parsers`) - Platform detection and binary resolution
+2. **Platform packages** - Platform-specific binaries (e.g., `@breeze/tree-sitter-parsers-darwin-arm64`)
+
+The main package uses npm's `optionalDependencies` to install only the relevant platform binary. If the platform package isn't available, it falls back to downloading the binary from GitHub releases.
 
 ## License
 
-[MIT](./LICENSE)
+MIT

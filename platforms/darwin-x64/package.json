@@ -1,0 +1,30 @@
+{
+  "name": "@breeze/tree-sitter-parsers-darwin-x64",
+  "version": "0.1.0",
+  "description": "Tree-sitter parsers binary for macOS x64",
+  "main": "index.js",
+  "files": [
+    "libtree-sitter-all-macos-x86_64.a",
+    "grammars-macos-x86_64.json",
+    "index.js"
+  ],
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "binary",
+    "darwin-x64"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/casualjim/breeze-tree-sitter-parsers.git",
+    "directory": "platforms/darwin-x64"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ]
+}

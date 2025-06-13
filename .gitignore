@@ -1,10 +1,38 @@
-# Python-generated files
+# Build artifacts
+grammars/
+dist/
+binaries/
+
+# Platform package binaries (symlinks during development)
+platforms/*/libtree-sitter-*.a
+platforms/*/grammars-*.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+*.tgz
+
+# Python (for legacy build script)
 __pycache__/
 *.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+.venv/
 
-# Virtual environments
-.venv
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+temp_objects/

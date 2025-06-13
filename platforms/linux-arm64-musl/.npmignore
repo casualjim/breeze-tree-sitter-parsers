@@ -1,0 +1,5 @@
+# Include everything
+!libtree-sitter-all-linux-aarch64-musl.a
+!grammars-linux-aarch64-musl.json
+!index.js
+!package.json

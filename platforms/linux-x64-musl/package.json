@@ -1,0 +1,30 @@
+{
+  "name": "@breeze/tree-sitter-parsers-linux-x64-musl",
+  "version": "0.1.0",
+  "description": "Tree-sitter parsers binary for Linux x64 (musl)",
+  "main": "index.js",
+  "files": [
+    "libtree-sitter-all-linux-x86_64-musl.a",
+    "grammars-linux-x86_64-musl.json",
+    "index.js"
+  ],
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "binary",
+    "linux-x64-musl"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/casualjim/breeze-tree-sitter-parsers.git",
+    "directory": "platforms/linux-x64-musl"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ]
+}

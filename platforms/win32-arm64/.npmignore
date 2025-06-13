@@ -1,0 +1,5 @@
+# Include everything
+!libtree-sitter-all-windows-aarch64.a
+!grammars-windows-aarch64.json
+!index.js
+!package.json
