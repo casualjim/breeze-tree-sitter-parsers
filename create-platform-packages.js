@@ -6,49 +6,49 @@ const path = require('path');
 const platforms = [
   { 
     npmName: 'darwin-x64', 
-    binaryName: 'libtree-sitter-all-macos-x86_64.a',
+    binaryName: 'libtree-sitter-parsers-all-macos-x86_64.a',
     metadataName: 'grammars-macos-x86_64.json',
     description: 'macOS x64'
   },
   { 
     npmName: 'darwin-arm64', 
-    binaryName: 'libtree-sitter-all-macos-aarch64.a',
+    binaryName: 'libtree-sitter-parsers-all-macos-aarch64.a',
     metadataName: 'grammars-macos-aarch64.json',
     description: 'macOS ARM64'
   },
   { 
     npmName: 'linux-x64', 
-    binaryName: 'libtree-sitter-all-linux-x86_64-glibc.a',
+    binaryName: 'libtree-sitter-parsers-all-linux-x86_64-glibc.a',
     metadataName: 'grammars-linux-x86_64-glibc.json',
     description: 'Linux x64 (glibc)'
   },
   { 
     npmName: 'linux-arm64', 
-    binaryName: 'libtree-sitter-all-linux-aarch64-glibc.a',
+    binaryName: 'libtree-sitter-parsers-all-linux-aarch64-glibc.a',
     metadataName: 'grammars-linux-aarch64-glibc.json',
     description: 'Linux ARM64 (glibc)'
   },
   { 
     npmName: 'linux-x64-musl', 
-    binaryName: 'libtree-sitter-all-linux-x86_64-musl.a',
+    binaryName: 'libtree-sitter-parsers-all-linux-x86_64-musl.a',
     metadataName: 'grammars-linux-x86_64-musl.json',
     description: 'Linux x64 (musl)'
   },
   { 
     npmName: 'linux-arm64-musl', 
-    binaryName: 'libtree-sitter-all-linux-aarch64-musl.a',
+    binaryName: 'libtree-sitter-parsers-all-linux-aarch64-musl.a',
     metadataName: 'grammars-linux-aarch64-musl.json',
     description: 'Linux ARM64 (musl)'
   },
   { 
     npmName: 'win32-x64', 
-    binaryName: 'libtree-sitter-all-windows-x86_64.a',
+    binaryName: 'libtree-sitter-parsers-all-windows-x86_64.a',
     metadataName: 'grammars-windows-x86_64.json',
     description: 'Windows x64'
   },
   { 
     npmName: 'win32-arm64', 
-    binaryName: 'libtree-sitter-all-windows-aarch64.a',
+    binaryName: 'libtree-sitter-parsers-all-windows-aarch64.a',
     metadataName: 'grammars-windows-aarch64.json',
     description: 'Windows ARM64'
   }
@@ -119,30 +119,30 @@ module.exports = __filename;
     npmignore
   );
   
-  // Create symlinks to the actual binaries (for local development)
+  // Copy the actual binaries (not symlinks)
   const binarySource = path.join(__dirname, 'dist', platform.binaryName);
   const metadataSource = path.join(__dirname, 'dist', platform.metadataName);
   const binaryDest = path.join(packageDir, platform.binaryName);
   const metadataDest = path.join(packageDir, platform.metadataName);
   
-  // Remove existing symlinks/files if they exist
+  // Remove existing files if they exist
   [binaryDest, metadataDest].forEach(dest => {
     if (fs.existsSync(dest)) {
       fs.unlinkSync(dest);
     }
   });
   
-  // Create symlinks if source files exist
+  // Copy files if source files exist
   if (fs.existsSync(binarySource)) {
-    fs.symlinkSync(binarySource, binaryDest);
-    console.log(`Created symlink for ${platform.binaryName}`);
+    fs.copyFileSync(binarySource, binaryDest);
+    console.log(`Copied ${platform.binaryName}`);
   } else {
     console.log(`Warning: Binary not found at ${binarySource}`);
   }
   
   if (fs.existsSync(metadataSource)) {
-    fs.symlinkSync(metadataSource, metadataDest);
-    console.log(`Created symlink for ${platform.metadataName}`);
+    fs.copyFileSync(metadataSource, metadataDest);
+    console.log(`Copied ${platform.metadataName}`);
   } else {
     console.log(`Warning: Metadata not found at ${metadataSource}`);
   }
@@ -152,7 +152,6 @@ module.exports = __filename;
 
 console.log('\nAll platform packages created successfully!');
 console.log('\nTo publish:');
-console.log('1. Build all platform binaries using: ./build-grammars --all-platforms');
-console.log('2. Copy binaries to platform directories (replacing symlinks)');
-console.log('3. Publish each platform package: npm publish platforms/<platform>');
-console.log('4. Publish main package: npm publish');
+console.log('1. Build all platform binaries using: npm run build:all');
+console.log('2. Run: npm run create-packages (to copy binaries)');
+console.log('3. Run: npm run publish-all');

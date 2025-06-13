@@ -8,10 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawn, execSync } = require('child_process');
-const { promisify } = require('util');
-const exec = promisify(require('child_process').exec);
 const os = require('os');
-const { Worker } = require('worker_threads');
 
 // Platform configurations
 const PLATFORMS = {
@@ -267,7 +264,7 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig = n
   }
 
   // Output file
-  const libName = `libtree-sitter-${name}.a`;
+  const libName = `libtree-sitter-parsers-${name}.a`;
   const outputFile = path.join(platformDir, libName);
 
   // Compile object files - use grammar name as prefix to avoid conflicts
@@ -280,12 +277,12 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig = n
     // Build command for this specific file
     let cmd;
     if (useZig && platformConfig) {
-      const compiler = sourceIsCpp ? 'zig c++' : 'zig cc';
-      cmd = compiler.split().concat([
+      cmd = sourceIsCpp ? ['zig', 'c++'] : ['zig', 'cc'];
+      cmd.push(
         '-target', platformConfig.zig_target,
         '-O3',
         '-c'
-      ]);
+      );
     } else {
       const compiler = sourceIsCpp ? 'c++' : 'cc';
       cmd = [compiler, '-O3', '-c'];
@@ -333,7 +330,9 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig = n
       for (const obj of objFiles) {
         try { fs.unlinkSync(obj); } catch {}
       }
-      return { success: false, message: `${name} - compile error: ${error.stderr}` };
+      const errorDetails = error.stderr || error.stdout || error.message || 'Unknown error';
+      const fullCommand = compileCmd.join(' ');
+      return { success: false, message: `${name} - compile error:\nCommand: ${fullCommand}\nError: ${errorDetails}` };
     }
   }
 
@@ -360,7 +359,9 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig = n
       try { fs.unlinkSync(obj); } catch {}
     }
     try { fs.unlinkSync(outputFile); } catch {}
-    return { success: false, message: `${name} - ar error: ${error.stderr}` };
+    const errorDetails = error.stderr || error.stdout || error.message || 'Unknown error';
+    const fullCommand = arCmd.join(' ');
+    return { success: false, message: `${name} - ar error:\nCommand: ${fullCommand}\nError: ${errorDetails}` };
   }
 }
 
@@ -467,7 +468,8 @@ async function main() {
   }
 
   // Load grammars configuration
-  const grammars = JSON.parse(fs.readFileSync(grammarsJson, 'utf8'));
+  const config = JSON.parse(fs.readFileSync(grammarsJson, 'utf8'));
+  const grammars = config.grammars;
   console.log(`Found ${grammars.length} grammars`);
 
   // Fetch grammars if needed
@@ -575,7 +577,7 @@ async function main() {
       // Collect all library files
       const libFiles = [];
       for (const grammarName of compiledGrammars) {
-        const libFile = path.join(platformDir, `libtree-sitter-${grammarName}.a`);
+        const libFile = path.join(platformDir, `libtree-sitter-parsers-${grammarName}.a`);
         if (fs.existsSync(libFile)) {
           libFiles.push(libFile);
         }
@@ -583,7 +585,7 @@ async function main() {
 
       if (libFiles.length > 0) {
         // Create combined library name
-        const combinedLib = path.join(precompiledDir, `libtree-sitter-all-${platformName}.a`);
+        const combinedLib = path.join(precompiledDir, `libtree-sitter-parsers-all-${platformName}.a`);
 
         // First, extract all object files from all archives
         const tempObjDir = path.join(platformDir, 'temp_objects');
@@ -654,7 +656,7 @@ async function main() {
       console.log(`    ${failedGrammars.join(', ')}`);
     }
     if (compiledGrammars.length > 0) {
-      console.log(`  Output: ${precompiledDir}/libtree-sitter-all-${platformName}.a`);
+      console.log(`  Output: ${precompiledDir}/libtree-sitter-parsers-all-${platformName}.a`);
     }
   }
 

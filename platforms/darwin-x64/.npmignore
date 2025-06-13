@@ -1,5 +1,0 @@
-# Include everything
-!libtree-sitter-all-macos-x86_64.a
-!grammars-macos-x86_64.json
-!index.js
-!package.json

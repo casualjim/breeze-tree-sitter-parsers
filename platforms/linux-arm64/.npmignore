@@ -1,5 +1,0 @@
-# Include everything
-!libtree-sitter-all-linux-aarch64-glibc.a
-!grammars-linux-aarch64-glibc.json
-!index.js
-!package.json

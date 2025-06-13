@@ -16,8 +16,17 @@ function getPlatformPackage() {
       // Check if using musl libc (Alpine Linux, etc.)
       const isMusl = (() => {
         try {
+          // First try ldd
           const lddOutput = require('child_process').execSync('ldd --version 2>&1', { encoding: 'utf8' });
-          return lddOutput.includes('musl');
+          if (lddOutput.includes('musl')) return true;
+        } catch {
+          // ldd might not exist or fail
+        }
+        
+        // Check if /lib/ld-musl* exists (Alpine/musl systems)
+        try {
+          const files = fs.readdirSync('/lib');
+          return files.some(f => f.startsWith('ld-musl'));
         } catch {
           return false;
         }
@@ -51,15 +60,15 @@ function getBinaryPath() {
     
     switch (platform) {
       case 'darwin':
-        binaryName = `libtree-sitter-all-macos-${arch === 'arm64' ? 'aarch64' : 'x86_64'}.a`;
+        binaryName = `libtree-sitter-parsers-all-macos-${arch === 'arm64' ? 'aarch64' : 'x86_64'}.a`;
         break;
       case 'linux':
         const isMusl = platformPackage.includes('musl');
         const archName = arch === 'arm64' ? 'aarch64' : 'x86_64';
-        binaryName = `libtree-sitter-all-linux-${archName}-${isMusl ? 'musl' : 'glibc'}.a`;
+        binaryName = `libtree-sitter-parsers-all-linux-${archName}-${isMusl ? 'musl' : 'glibc'}.a`;
         break;
       case 'win32':
-        binaryName = `libtree-sitter-all-windows-${arch === 'arm64' ? 'aarch64' : 'x86_64'}.a`;
+        binaryName = `libtree-sitter-parsers-all-windows-${arch === 'arm64' ? 'aarch64' : 'x86_64'}.a`;
         break;
     }
     
@@ -95,19 +104,22 @@ function getMetadataPath() {
   const binaryPath = getBinaryPath();
   const dir = path.dirname(binaryPath);
   const binaryName = path.basename(binaryPath, '.a');
-  const metadataName = binaryName.replace('libtree-sitter-all-', 'grammars-') + '.json';
+  const metadataName = binaryName.replace('libtree-sitter-parsers-all-', 'grammars-') + '.json';
   return path.join(dir, metadataName);
 }
 
+const binaryPath = getBinaryPath();
+const metadataPath = getMetadataPath();
+
 module.exports = {
-  binaryPath: getBinaryPath(),
-  metadataPath: getMetadataPath(),
+  binaryPath,
+  metadataPath,
   platformPackage: getPlatformPackage(),
   
   // Utility function to get all available grammars
   getGrammars() {
     try {
-      return JSON.parse(fs.readFileSync(this.metadataPath, 'utf8'));
+      return JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
     } catch (error) {
       console.error('Failed to load grammars metadata:', error);
       return [];

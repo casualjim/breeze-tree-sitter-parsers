@@ -45,22 +45,32 @@ function getPlatformBinaryName() {
   
   switch (platform) {
     case 'darwin':
-      return `libtree-sitter-all-macos-${arch === 'arm64' ? 'aarch64' : 'x86_64'}.a`;
+      return `libtree-sitter-parsers-all-macos-${arch === 'arm64' ? 'aarch64' : 'x86_64'}.a`;
     case 'linux':
       // Try to detect musl
       const isMusl = (() => {
         try {
+          // First try ldd
           const lddOutput = require('child_process').execSync('ldd --version 2>&1', { encoding: 'utf8' });
-          return lddOutput.includes('musl');
+          if (lddOutput.includes('musl')) return true;
+        } catch {
+          // ldd might not exist or fail
+        }
+        
+        // Check if /lib/ld-musl* exists (Alpine/musl systems)
+        try {
+          const fs = require('fs');
+          const files = fs.readdirSync('/lib');
+          return files.some(f => f.startsWith('ld-musl'));
         } catch {
           return false;
         }
       })();
       
       const archName = arch === 'arm64' ? 'aarch64' : 'x86_64';
-      return `libtree-sitter-all-linux-${archName}-${isMusl ? 'musl' : 'glibc'}.a`;
+      return `libtree-sitter-parsers-all-linux-${archName}-${isMusl ? 'musl' : 'glibc'}.a`;
     case 'win32':
-      return `libtree-sitter-all-windows-${arch === 'arm64' ? 'aarch64' : 'x86_64'}.a`;
+      return `libtree-sitter-parsers-all-windows-${arch === 'arm64' ? 'aarch64' : 'x86_64'}.a`;
     default:
       throw new Error(`Unsupported platform: ${platform} ${arch}`);
   }
@@ -68,19 +78,28 @@ function getPlatformBinaryName() {
 
 function getMetadataFileName() {
   const binaryName = getPlatformBinaryName();
-  return binaryName.replace('libtree-sitter-all-', 'grammars-').replace('.a', '.json');
+  return binaryName.replace('libtree-sitter-parsers-all-', 'grammars-').replace('.a', '.json');
 }
 
 async function checkOptionalDependency() {
   try {
-    // Try to load the main module which will check for platform packages
-    require('./index.js');
-    console.log('Platform-specific package already installed.');
-    return true;
+    // Simply try to load the main module - if it works, we have what we need
+    const { binaryPath, metadataPath } = require('./index.js');
+    
+    // Verify the files actually exist
+    if (fs.existsSync(binaryPath) && fs.existsSync(metadataPath)) {
+      console.log('Tree-sitter parsers binary found.');
+      return true;
+    }
+    console.log(`Binary not found at: ${binaryPath}`);
+    console.log(`Metadata not found at: ${metadataPath}`);
   } catch (error) {
-    console.log('Platform-specific package not found, will download binary.');
-    return false;
+    // Binary not found via normal package installation
+    console.log('Error loading index.js:', error.message);
   }
+  
+  console.log('Binary not found in platform package, will use fallback download.');
+  return false;
 }
 
 async function downloadBinaries() {
@@ -133,6 +152,7 @@ async function main() {
   const hasOptionalDep = await checkOptionalDependency();
   
   if (!hasOptionalDep) {
+    console.log('Downloading tree-sitter parsers for your platform...');
     await downloadBinaries();
   }
 }

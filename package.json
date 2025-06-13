@@ -13,13 +13,15 @@
     "fetch": "node build-grammars.js --fetch-only",
     "compile": "node build-grammars.js --compile-only",
     "create-packages": "node create-platform-packages.js",
-    "publish-all": "bash publish-packages.sh"
+    "publish-all": "bash publish-packages.sh",
+    "test-distribution": "node test-distribution.js",
+    "test-distribution:x64": "node test-distribution.js --arch x64",
+    "test-distribution:arm64": "node test-distribution.js --arch arm64"
   },
   "files": [
     "index.js",
     "postinstall.js",
-    "bin/",
-    "grammars.json"
+    "bin/"
   ],
   "keywords": [
     "tree-sitter",
@@ -32,6 +34,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/casualjim/breeze-tree-sitter-parsers.git"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "optionalDependencies": {
     "@breeze/tree-sitter-parsers-darwin-x64": "0.1.0",

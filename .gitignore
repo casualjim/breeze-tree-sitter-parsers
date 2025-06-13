@@ -36,3 +36,5 @@ Thumbs.db
 *.tmp
 *.temp
 temp_objects/
+/test-dist
+/platforms

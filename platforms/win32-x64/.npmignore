@@ -1,5 +1,0 @@
-# Include everything
-!libtree-sitter-all-windows-x86_64.a
-!grammars-windows-x86_64.json
-!index.js
-!package.json

@@ -32,14 +32,14 @@ copy_binaries() {
 # Copy binaries to platform directories
 echo "Copying binaries to platform packages..."
 
-copy_binaries "darwin-x64" "libtree-sitter-all-macos-x86_64.a" "grammars-macos-x86_64.json"
-copy_binaries "darwin-arm64" "libtree-sitter-all-macos-aarch64.a" "grammars-macos-aarch64.json"
-copy_binaries "linux-x64" "libtree-sitter-all-linux-x86_64-glibc.a" "grammars-linux-x86_64-glibc.json"
-copy_binaries "linux-arm64" "libtree-sitter-all-linux-aarch64-glibc.a" "grammars-linux-aarch64-glibc.json"
-copy_binaries "linux-x64-musl" "libtree-sitter-all-linux-x86_64-musl.a" "grammars-linux-x86_64-musl.json"
-copy_binaries "linux-arm64-musl" "libtree-sitter-all-linux-aarch64-musl.a" "grammars-linux-aarch64-musl.json"
-copy_binaries "win32-x64" "libtree-sitter-all-windows-x86_64.a" "grammars-windows-x86_64.json"
-copy_binaries "win32-arm64" "libtree-sitter-all-windows-aarch64.a" "grammars-windows-aarch64.json"
+copy_binaries "darwin-x64" "libtree-sitter-parsers-all-macos-x86_64.a" "grammars-macos-x86_64.json"
+copy_binaries "darwin-arm64" "libtree-sitter-parsers-all-macos-aarch64.a" "grammars-macos-aarch64.json"
+copy_binaries "linux-x64" "libtree-sitter-parsers-all-linux-x86_64-glibc.a" "grammars-linux-x86_64-glibc.json"
+copy_binaries "linux-arm64" "libtree-sitter-parsers-all-linux-aarch64-glibc.a" "grammars-linux-aarch64-glibc.json"
+copy_binaries "linux-x64-musl" "libtree-sitter-parsers-all-linux-x86_64-musl.a" "grammars-linux-x86_64-musl.json"
+copy_binaries "linux-arm64-musl" "libtree-sitter-parsers-all-linux-aarch64-musl.a" "grammars-linux-aarch64-musl.json"
+copy_binaries "win32-x64" "libtree-sitter-parsers-all-windows-x86_64.a" "grammars-windows-x86_64.json"
+copy_binaries "win32-arm64" "libtree-sitter-parsers-all-windows-aarch64.a" "grammars-windows-aarch64.json"
 
 # Publish platform packages
 echo -e "\nPublishing platform packages..."

@@ -51,7 +51,7 @@ gcc myapp.c $PARSER_LIB -o myapp
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20+
 - Git
 - Zig (for cross-compilation)
 - C/C++ compiler (for native builds)
