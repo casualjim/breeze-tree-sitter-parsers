@@ -25,7 +25,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install Zig
         uses: goto-bus-stop/setup-zig@v2
@@ -33,7 +32,7 @@ jobs:
           version: '0.14.1'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --no-optional
 
       - name: Cache grammar repositories
         id: cache-grammars
