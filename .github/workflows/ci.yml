@@ -48,6 +48,13 @@ jobs:
         if: steps.cache-grammars.outputs.cache-hit != 'true'
         run: npm run fetch
 
+      - name: Save grammar cache
+        if: steps.cache-grammars.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: grammars
+          key: grammars-${{ hashFiles('grammars.json') }}-v1
+
       - name: Build for all platforms
         run: npm run build:all
 
