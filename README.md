@@ -24,9 +24,29 @@ console.log(metadataPath); // Path to the grammars metadata JSON
 ### Command-line usage
 
 ```bash
-# Get the path to the binary
+# Get the path to the binary for your current platform
 npx tree-sitter-parsers-path
+
+# Get the path for a specific platform
+npx tree-sitter-parsers-path --os linux --arch x64 --variant musl
+
+# Get the metadata file path instead of binary
+npx tree-sitter-parsers-path --metadata
+
+# Get macOS ARM64 binary path
+npx tree-sitter-parsers-path --os darwin --arch arm64
+
+# Show help
+npx tree-sitter-parsers-path --help
 ```
+
+#### CLI Options
+
+- `--os <os>` - Target OS: `darwin`, `linux`, or `win32`
+- `--arch <arch>` - Target architecture: `x64` or `arm64`
+- `--variant <variant>` - Target variant (Linux only): `glibc` or `musl`
+- `--metadata` - Return metadata JSON path instead of binary path
+- `--help` - Show help message
 
 ### Build tools integration
 
@@ -36,6 +56,10 @@ The binary path can be used in build scripts:
 # In a build script
 PARSER_LIB=$(npx tree-sitter-parsers-path)
 gcc myapp.c $PARSER_LIB -o myapp
+
+# Cross-compilation example
+LINUX_PARSER=$(npx tree-sitter-parsers-path --os linux --arch x64)
+x86_64-linux-gnu-gcc myapp.c $LINUX_PARSER -o myapp-linux
 ```
 
 ## Supported Platforms
