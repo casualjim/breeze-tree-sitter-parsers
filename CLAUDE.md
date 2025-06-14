@@ -53,8 +53,8 @@ The build system consists of:
 
 The project uses npm for binary distribution:
 
-1. **Main package** (`@breeze/tree-sitter-parsers`) - Platform detection and binary path resolution
-2. **Platform packages** (e.g., `@breeze/tree-sitter-parsers-darwin-arm64`) - Platform-specific binaries
+1. **Main package** (`@kumos/tree-sitter-parsers`) - Platform detection and binary path resolution
+2. **Platform packages** (e.g., `@kumos/tree-sitter-parsers-darwin-arm64`) - Platform-specific binaries
 3. **Fallback mechanism** - Downloads binaries from GitHub releases if platform package unavailable
 
 Key files:

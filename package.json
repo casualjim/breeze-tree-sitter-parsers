@@ -23,16 +23,16 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "@breeze/tree-sitter-parsers",
+  "name": "@kumos/tree-sitter-parsers",
   "optionalDependencies": {
-    "@breeze/tree-sitter-parsers-darwin-arm64": "0.1.0",
-    "@breeze/tree-sitter-parsers-darwin-x64": "0.1.0",
-    "@breeze/tree-sitter-parsers-linux-arm64": "0.1.0",
-    "@breeze/tree-sitter-parsers-linux-arm64-musl": "0.1.0",
-    "@breeze/tree-sitter-parsers-linux-x64": "0.1.0",
-    "@breeze/tree-sitter-parsers-linux-x64-musl": "0.1.0",
-    "@breeze/tree-sitter-parsers-win32-arm64": "0.1.0",
-    "@breeze/tree-sitter-parsers-win32-x64": "0.1.0"
+    "@kumos/tree-sitter-parsers-darwin-arm64": "0.1.0",
+    "@kumos/tree-sitter-parsers-darwin-x64": "0.1.0",
+    "@kumos/tree-sitter-parsers-linux-arm64": "0.1.0",
+    "@kumos/tree-sitter-parsers-linux-arm64-musl": "0.1.0",
+    "@kumos/tree-sitter-parsers-linux-x64": "0.1.0",
+    "@kumos/tree-sitter-parsers-linux-x64-musl": "0.1.0",
+    "@kumos/tree-sitter-parsers-win32-arm64": "0.1.0",
+    "@kumos/tree-sitter-parsers-win32-x64": "0.1.0"
   },
   "repository": {
     "type": "git",

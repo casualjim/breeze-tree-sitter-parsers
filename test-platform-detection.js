@@ -37,17 +37,17 @@ const arch = os.arch();
 let npmPackage;
 switch (platform) {
   case 'darwin':
-    npmPackage = `@breeze/tree-sitter-parsers-darwin-${arch}`;
+    npmPackage = `@kumos/tree-sitter-parsers-darwin-${arch}`;
     break;
   case 'linux':
     if (arch === 'x64' || arch === 'x86_64') {
-      npmPackage = isMusl ? '@breeze/tree-sitter-parsers-linux-x64-musl' : '@breeze/tree-sitter-parsers-linux-x64';
+      npmPackage = isMusl ? '@kumos/tree-sitter-parsers-linux-x64-musl' : '@kumos/tree-sitter-parsers-linux-x64';
     } else if (arch === 'arm64' || arch === 'aarch64') {
-      npmPackage = isMusl ? '@breeze/tree-sitter-parsers-linux-arm64-musl' : '@breeze/tree-sitter-parsers-linux-arm64';
+      npmPackage = isMusl ? '@kumos/tree-sitter-parsers-linux-arm64-musl' : '@kumos/tree-sitter-parsers-linux-arm64';
     }
     break;
   case 'win32':
-    npmPackage = `@breeze/tree-sitter-parsers-win32-${arch}`;
+    npmPackage = `@kumos/tree-sitter-parsers-win32-${arch}`;
     break;
 }
 
@@ -55,8 +55,8 @@ console.log('Expected npm package:', npmPackage);
 
 // Check what's in node_modules
 try {
-  const nodeModules = fs.readdirSync('node_modules/@breeze');
-  console.log('Packages in node_modules/@breeze:', nodeModules);
+  const nodeModules = fs.readdirSync('node_modules/@kumos');
+  console.log('Packages in node_modules/@kumos:', nodeModules);
 } catch (e) {
-  console.log('No @breeze packages found');
+  console.log('No @kumos packages found');
 }

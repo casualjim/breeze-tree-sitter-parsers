@@ -20,7 +20,7 @@ const TEST_PLATFORMS = [
     docker: 'ubuntu:22.04',
     dockerPlatform: 'linux/amd64',
     platform: 'linux-x86_64-glibc',
-    npmPackage: '@breeze/tree-sitter-parsers-linux-x64',
+    npmPackage: '@kumos/tree-sitter-parsers-linux-x64',
     setupCommands: [
       'apt-get update',
       'apt-get install -y curl build-essential',
@@ -33,7 +33,7 @@ const TEST_PLATFORMS = [
     docker: 'alpine:latest',
     dockerPlatform: 'linux/amd64',
     platform: 'linux-x86_64-musl',
-    npmPackage: '@breeze/tree-sitter-parsers-linux-x64-musl',
+    npmPackage: '@kumos/tree-sitter-parsers-linux-x64-musl',
     setupCommands: [
       'apk add --no-cache nodejs-current npm build-base',
     ]
@@ -43,7 +43,7 @@ const TEST_PLATFORMS = [
     docker: 'node:20-alpine',
     dockerPlatform: 'linux/amd64',
     platform: 'linux-x86_64-musl',
-    npmPackage: '@breeze/tree-sitter-parsers-linux-x64-musl',
+    npmPackage: '@kumos/tree-sitter-parsers-linux-x64-musl',
     setupCommands: [
       'apk add --no-cache build-base python3',
     ]
@@ -54,7 +54,7 @@ const TEST_PLATFORMS = [
     docker: 'ubuntu:22.04',
     dockerPlatform: 'linux/arm64',
     platform: 'linux-aarch64-glibc',
-    npmPackage: '@breeze/tree-sitter-parsers-linux-arm64',
+    npmPackage: '@kumos/tree-sitter-parsers-linux-arm64',
     setupCommands: [
       'apt-get update',
       'apt-get install -y curl build-essential',
@@ -67,7 +67,7 @@ const TEST_PLATFORMS = [
     docker: 'alpine:latest',
     dockerPlatform: 'linux/arm64',
     platform: 'linux-aarch64-musl',
-    npmPackage: '@breeze/tree-sitter-parsers-linux-arm64-musl',
+    npmPackage: '@kumos/tree-sitter-parsers-linux-arm64-musl',
     setupCommands: [
       'apk add --no-cache nodejs-current npm build-base',
     ]
@@ -77,7 +77,7 @@ const TEST_PLATFORMS = [
     docker: 'node:20-alpine',
     dockerPlatform: 'linux/arm64',
     platform: 'linux-aarch64-musl',
-    npmPackage: '@breeze/tree-sitter-parsers-linux-arm64-musl',
+    npmPackage: '@kumos/tree-sitter-parsers-linux-arm64-musl',
     setupCommands: [
       'apk add --no-cache build-base python3',
     ]
@@ -87,7 +87,7 @@ const TEST_PLATFORMS = [
 // Test script that will run inside the container
 const TEST_SCRIPT = `
 const fs = require('fs');
-const { binaryPath, metadataPath, getGrammars } = require('@breeze/tree-sitter-parsers');
+const { binaryPath, metadataPath, getGrammars } = require('@kumos/tree-sitter-parsers');
 
 console.log('Binary path:', binaryPath);
 console.log('Metadata path:', metadataPath);
@@ -190,7 +190,7 @@ async function testPlatform(config) {
     name: "test-tree-sitter-parsers",
     version: "1.0.0",
     dependencies: {
-      "@breeze/tree-sitter-parsers": "file:./main-package"
+      "@kumos/tree-sitter-parsers": "file:./main-package"
     }
   };
 
@@ -236,8 +236,8 @@ RUN node test.js
 
 # Try to compile and link against the static library
 RUN echo "Testing static library compilation..."
-RUN ar -t $(node -e "console.log(require('@breeze/tree-sitter-parsers').binaryPath)") | head -20
-RUN gcc test.c $(node -e "console.log(require('@breeze/tree-sitter-parsers').binaryPath)") -o test_static || echo "Note: Direct linking test skipped (symbols not exported in .a file)"
+RUN ar -t $(node -e "console.log(require('@kumos/tree-sitter-parsers').binaryPath)") | head -20
+RUN gcc test.c $(node -e "console.log(require('@kumos/tree-sitter-parsers').binaryPath)") -o test_static || echo "Note: Direct linking test skipped (symbols not exported in .a file)"
 
 # Final success message
 RUN echo "Distribution test passed for ${config.name}!"
@@ -246,7 +246,7 @@ RUN echo "Distribution test passed for ${config.name}!"
   fs.writeFileSync(path.join(testDir, 'Dockerfile'), dockerfile);
 
   // Check if platform package exists
-  const platformPackageDir = path.join(__dirname, 'platforms', config.npmPackage.replace('@breeze/tree-sitter-parsers-', ''));
+  const platformPackageDir = path.join(__dirname, 'platforms', config.npmPackage.replace('@kumos/tree-sitter-parsers-', ''));
   if (!fs.existsSync(platformPackageDir)) {
     console.log(`Platform package ${config.npmPackage} not found at ${platformPackageDir}`);
     console.log('Make sure to run "npm run create-packages" first');

@@ -5,7 +5,7 @@ Pre-compiled Tree-sitter parsers for 163 programming languages, distributed as n
 ## Installation
 
 ```bash
-npm install @breeze/tree-sitter-parsers
+npm install @kumos/tree-sitter-parsers
 ```
 
 The appropriate binary for your platform will be automatically downloaded during installation.
@@ -15,7 +15,7 @@ The appropriate binary for your platform will be automatically downloaded during
 ### Get the binary path
 
 ```js
-const { binaryPath, metadataPath } = require('@breeze/tree-sitter-parsers');
+const { binaryPath, metadataPath } = require('@kumos/tree-sitter-parsers');
 
 console.log(binaryPath); // Path to the static library
 console.log(metadataPath); // Path to the grammars metadata JSON
@@ -80,8 +80,8 @@ npm run create-packages
 
 This project consists of:
 
-1. **Main package** (`@breeze/tree-sitter-parsers`) - Platform detection and binary resolution
-2. **Platform packages** - Platform-specific binaries (e.g., `@breeze/tree-sitter-parsers-darwin-arm64`)
+1. **Main package** (`@kumos/tree-sitter-parsers`) - Platform detection and binary resolution
+2. **Platform packages** - Platform-specific binaries (e.g., `@kumos/tree-sitter-parsers-darwin-arm64`)
 
 The main package uses npm's `optionalDependencies` to install only the relevant platform binary. If the platform package isn't available, it falls back to downloading the binary from GitHub releases.
 

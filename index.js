@@ -10,7 +10,7 @@ function getPlatformPackage() {
   
   switch (platform) {
     case 'darwin':
-      platformPackage = `@breeze/tree-sitter-parsers-darwin-${arch === 'arm64' ? 'arm64' : 'x64'}`;
+      platformPackage = `@kumos/tree-sitter-parsers-darwin-${arch === 'arm64' ? 'arm64' : 'x64'}`;
       break;
     case 'linux':
       // Check if using musl libc (Alpine Linux, etc.)
@@ -33,10 +33,10 @@ function getPlatformPackage() {
       })();
       
       const archSuffix = arch === 'arm64' ? 'arm64' : 'x64';
-      platformPackage = `@breeze/tree-sitter-parsers-linux-${archSuffix}${isMusl ? '-musl' : ''}`;
+      platformPackage = `@kumos/tree-sitter-parsers-linux-${archSuffix}${isMusl ? '-musl' : ''}`;
       break;
     case 'win32':
-      platformPackage = `@breeze/tree-sitter-parsers-win32-${arch === 'arm64' ? 'arm64' : 'x64'}`;
+      platformPackage = `@kumos/tree-sitter-parsers-win32-${arch === 'arm64' ? 'arm64' : 'x64'}`;
       break;
     default:
       throw new Error(`Unsupported platform: ${platform} ${arch}`);

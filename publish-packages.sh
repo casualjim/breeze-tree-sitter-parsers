@@ -41,13 +41,21 @@ copy_binaries "linux-arm64-musl" "libtree-sitter-parsers-all-linux-aarch64-musl.
 copy_binaries "win32-x64" "libtree-sitter-parsers-all-windows-x86_64.a" "grammars-windows-x86_64.json"
 copy_binaries "win32-arm64" "libtree-sitter-parsers-all-windows-aarch64.a" "grammars-windows-aarch64.json"
 
+# Publish main package first (it declares the optionalDependencies)
+echo -e "\nPublishing main package..."
+npm publish --access public || {
+    echo "Note: If this is the first publish and you see a 404 error,"
+    echo "you may need to create the @kumos scope on npmjs.com first."
+    exit 1
+}
+
 # Publish platform packages
 echo -e "\nPublishing platform packages..."
 
 for platform_dir in platforms/*/; do
     if [ -d "$platform_dir" ]; then
         platform=$(basename "$platform_dir")
-        echo "Publishing @breeze/tree-sitter-parsers-$platform..."
+        echo "Publishing @kumos/tree-sitter-parsers-$platform..."
         
         # Check if binary exists before publishing
         binary_files=$(find "$platform_dir" -name "*.a" -type f)
@@ -58,9 +66,5 @@ for platform_dir in platforms/*/; do
         fi
     fi
 done
-
-# Publish main package
-echo -e "\nPublishing main package..."
-npm publish --access public
 
 echo -e "\n✅ Publishing complete!"

@@ -57,7 +57,7 @@ const platforms = [
 const version = require('./package.json').version;
 
 platforms.forEach(platform => {
-  const packageName = `@breeze/tree-sitter-parsers-${platform.npmName}`;
+  const packageName = `@kumos/tree-sitter-parsers-${platform.npmName}`;
   const packageDir = path.join(__dirname, 'platforms', platform.npmName);
   
   // Create directory

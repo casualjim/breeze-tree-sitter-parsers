@@ -47,13 +47,13 @@ const args = process.argv.slice(2);
 
 if (args.length !== 2) {
   console.log('Usage: node update-package-scope.js <old-scope> <new-scope>');
-  console.log('Example: node update-package-scope.js @breeze @casualjim');
-  console.log('\nCurrent scope: @breeze');
+  console.log('Example: node update-package-scope.js @kumos @casualjim');
+  console.log('\nCurrent scope: @kumos');
   console.log('\nSuggested alternatives:');
   console.log('  - Unscoped: tree-sitter-unified-parsers');
   console.log('  - Personal: @casualjim/tree-sitter-parsers');
   console.log('  - Community: @tree-sitter-community/parsers');
-  console.log('  - Project: @breeze-editor/tree-sitter-parsers');
+  console.log('  - Project: @kumos-editor/tree-sitter-parsers');
   process.exit(1);
 }
 
