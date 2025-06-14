@@ -145,7 +145,16 @@ jobs:
           cd dist
           for file in libtree-sitter-parsers-all-*.a; do
             if [ -f "$file" ]; then
-              tar -czf "${file%.a}.tar.gz" "$file" "${file%.a}.json"
+              # Extract platform from filename
+              platform=${file#libtree-sitter-parsers-all-}
+              platform=${platform%.a}
+              json_file="grammars-${platform}.json"
+              
+              if [ -f "$json_file" ]; then
+                tar -czf "${file%.a}.tar.gz" "$file" "$json_file"
+              else
+                echo "Warning: JSON file $json_file not found for $file"
+              fi
             fi
           done
           cd ..
