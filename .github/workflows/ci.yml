@@ -79,8 +79,15 @@ jobs:
       - name: Build for all platforms
         run: npm run build:all
 
-      - name: Validate built libraries
+      - name: Validate Linux build
         run: npm run validate
+
+      - name: Validate Windows build (cross-compilation)
+        run: |
+          rustup target add x86_64-pc-windows-msvc
+          cd validation
+          cargo build --release --target x86_64-pc-windows-msvc
+          echo "✅ Windows binary successfully linked (cross-compilation test)"
 
       - name: Create npm packages
         run: npm run create-packages
