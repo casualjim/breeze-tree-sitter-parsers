@@ -1,5 +1,5 @@
 {
-  "author": "",
+  "author": "Ivan Porto Carrero <ivan@flanders.co.nz>",
   "bin": {
     "tree-sitter-parsers-path": "./bin/tree-sitter-parsers-path.js"
   },
@@ -25,14 +25,14 @@
   "main": "index.js",
   "name": "@kumos/tree-sitter-parsers",
   "optionalDependencies": {
-    "@kumos/tree-sitter-parsers-darwin-arm64": "0.1.1",
-    "@kumos/tree-sitter-parsers-darwin-x64": "0.1.1",
-    "@kumos/tree-sitter-parsers-linux-arm64": "0.1.1",
-    "@kumos/tree-sitter-parsers-linux-arm64-musl": "0.1.1",
-    "@kumos/tree-sitter-parsers-linux-x64": "0.1.1",
-    "@kumos/tree-sitter-parsers-linux-x64-musl": "0.1.1",
-    "@kumos/tree-sitter-parsers-win32-arm64": "0.1.1",
-    "@kumos/tree-sitter-parsers-win32-x64": "0.1.1"
+    "@kumos/tree-sitter-parsers-darwin-arm64": "0.1.2",
+    "@kumos/tree-sitter-parsers-darwin-x64": "0.1.2",
+    "@kumos/tree-sitter-parsers-linux-arm64": "0.1.2",
+    "@kumos/tree-sitter-parsers-linux-arm64-musl": "0.1.2",
+    "@kumos/tree-sitter-parsers-linux-x64": "0.1.2",
+    "@kumos/tree-sitter-parsers-linux-x64-musl": "0.1.2",
+    "@kumos/tree-sitter-parsers-win32-arm64": "0.1.2",
+    "@kumos/tree-sitter-parsers-win32-x64": "0.1.2"
   },
   "repository": {
     "type": "git",
@@ -41,8 +41,8 @@
   "scripts": {
     "build": "node build-grammars.js",
     "build:all": "node build-grammars.js --all-platforms",
-    "build:validated": "npm run build && npm run validate",
     "build:all:validated": "npm run build:all && npm run validate",
+    "build:validated": "npm run build && npm run validate",
     "compile": "node build-grammars.js --compile-only",
     "create-packages": "node create-platform-packages.js",
     "fetch": "node build-grammars.js --fetch-only",
@@ -53,5 +53,5 @@
     "test-distribution:x64": "node test-distribution.js --arch x64",
     "validate": "node validate.js"
   },
-  "version": "0.1.1"
+  "version": "0.1.2"
 }
