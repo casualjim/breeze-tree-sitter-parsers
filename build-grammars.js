@@ -30,11 +30,11 @@ const PLATFORMS = {
   },
   'windows-x86_64': {
     zig_target: 'x86_64-windows-gnu',
-    rust_target: 'x86_64-pc-windows-gnu',
+    rust_target: 'x86_64-pc-windows-msvc',
   },
   'windows-aarch64': {
     zig_target: 'aarch64-windows-gnu',
-    rust_target: 'aarch64-pc-windows-gnu',
+    rust_target: 'aarch64-pc-windows-msvc',
   },
   'macos-x86_64': {
     zig_target: 'x86_64-macos',

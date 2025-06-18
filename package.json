@@ -41,6 +41,8 @@
   "scripts": {
     "build": "node build-grammars.js",
     "build:all": "node build-grammars.js --all-platforms",
+    "build:validated": "npm run build && npm run validate",
+    "build:all:validated": "npm run build:all && npm run validate",
     "compile": "node build-grammars.js --compile-only",
     "create-packages": "node create-platform-packages.js",
     "fetch": "node build-grammars.js --fetch-only",
@@ -48,7 +50,8 @@
     "publish-all": "bash publish-packages.sh",
     "test-distribution": "node test-distribution.js",
     "test-distribution:arm64": "node test-distribution.js --arch arm64",
-    "test-distribution:x64": "node test-distribution.js --arch x64"
+    "test-distribution:x64": "node test-distribution.js --arch x64",
+    "validate": "node validate.js"
   },
   "version": "0.1.1"
 }

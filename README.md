@@ -25,19 +25,19 @@ console.log(metadataPath); // Path to the grammars metadata JSON
 
 ```bash
 # Get the path to the binary for your current platform
-npx tree-sitter-parsers-path
+npx @kumos/tree-sitter-parsers
 
 # Get the path for a specific platform
-npx tree-sitter-parsers-path --os linux --arch x64 --variant musl
+npx @kumos/tree-sitter-parsers --os linux --arch x64 --variant musl
 
 # Get the metadata file path instead of binary
-npx tree-sitter-parsers-path --metadata
+npx @kumos/tree-sitter-parsers --metadata
 
 # Get macOS ARM64 binary path
-npx tree-sitter-parsers-path --os darwin --arch arm64
+npx @kumos/tree-sitter-parsers --os darwin --arch arm64
 
 # Show help
-npx tree-sitter-parsers-path --help
+npx @kumos/tree-sitter-parsers --help
 ```
 
 #### CLI Options
@@ -54,11 +54,11 @@ The binary path can be used in build scripts:
 
 ```bash
 # In a build script
-PARSER_LIB=$(npx tree-sitter-parsers-path)
+PARSER_LIB=$(npx @kumos/tree-sitter-parsers)
 gcc myapp.c $PARSER_LIB -o myapp
 
 # Cross-compilation example
-LINUX_PARSER=$(npx tree-sitter-parsers-path --os linux --arch x64)
+LINUX_PARSER=$(npx @kumos/tree-sitter-parsers --os linux --arch x64)
 x86_64-linux-gnu-gcc myapp.c $LINUX_PARSER -o myapp-linux
 ```
 
@@ -98,7 +98,31 @@ npm run build:all
 
 # Create npm packages for distribution
 npm run create-packages
+
+# Validate built libraries (recommended)
+npm run validate
+
+# Build and validate in one step
+npm run build:validated
+npm run build:all:validated
 ```
+
+### Validation
+
+The project includes a validation system that tests the actual linking and usage of the built libraries:
+
+```bash
+# Validate current platform binaries
+npm run validate
+```
+
+This validation:
+- ✅ Tests actual Rust linking (catches MSVC/MinGW compatibility issues)
+- ✅ Verifies grammar loading and function calls work correctly
+- ✅ Tests basic parsing functionality
+- ✅ Runs the exact same code path as consuming projects
+
+**Important**: Always run validation before publishing or in CI pipelines to catch binary compatibility issues early.
 
 ## Architecture
 
