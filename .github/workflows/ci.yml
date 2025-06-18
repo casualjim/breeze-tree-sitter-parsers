@@ -85,20 +85,40 @@ jobs:
       - name: Validate Linux build
         run: npm run validate
 
-      - name: Validate Windows build (cross-compilation)
-        run: |
-          rustup target add x86_64-pc-windows-msvc
-          
-          # Set up include paths for MSVC headers (for both C and C++)
-          export CFLAGS_x86_64_pc_windows_msvc="-I$PWD/include/msvc/crt/include -I$PWD/include/msvc/sdk/include/ucrt -I$PWD/include/msvc/sdk/include/um -I$PWD/include/msvc/sdk/include/shared"
-          export CXXFLAGS_x86_64_pc_windows_msvc="-I$PWD/include/msvc/crt/include -I$PWD/include/msvc/sdk/include/ucrt -I$PWD/include/msvc/sdk/include/um -I$PWD/include/msvc/sdk/include/shared"
-          
-          cd validation
-          cargo zigbuild --release --target x86_64-pc-windows-msvc
-          echo "✅ Windows binary successfully linked (cross-compilation test)"
-
       - name: Create npm packages
         run: npm run create-packages
+
+      - name: Create temporary artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tree-sitter-parsers-all-platforms-temp
+          path: |
+            dist/
+            platforms/
+          retention-days: 1
+
+
+  validate-windows:
+    needs: build-all-platforms
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: tree-sitter-parsers-all-platforms-temp
+
+      - name: Validate Windows build
+        run: |
+          cd validation
+          cargo build --release
+          echo "✅ Windows binary successfully linked on Windows"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -108,9 +128,9 @@ jobs:
             dist/
             platforms/
           retention-days: 7
-
+  
   test-distribution:
-    needs: build-all-platforms
+    needs: [build-all-platforms, validate-windows]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
