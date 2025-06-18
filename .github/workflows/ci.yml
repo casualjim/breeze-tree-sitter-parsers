@@ -26,10 +26,20 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Setup Rust toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          toolchain: stable
+
       - name: Install Zig
         uses: goto-bus-stop/setup-zig@v2
         with:
           version: '0.14.1'
+
+      - name: Install xwin for MSVC headers
+        run: |
+          cargo install xwin
+          xwin --accept-license --cache-dir ./cache/msvc splat --output ./include/msvc
 
       - name: Install dependencies
         run: npm install --no-optional
@@ -58,6 +68,9 @@ jobs:
       - name: Build for all platforms
         run: npm run build:all
 
+      - name: Validate built libraries
+        run: npm run validate
+
       - name: Create npm packages
         run: npm run create-packages
 
@@ -85,6 +98,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: tree-sitter-parsers-all-platforms
+
+      - name: Setup Rust for validation
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Validate built libraries
+        run: npm run validate
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
