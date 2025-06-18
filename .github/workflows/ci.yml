@@ -36,10 +36,21 @@ jobs:
         with:
           version: '0.14.1'
 
-      - name: Install xwin for MSVC headers
-        run: |
-          cargo install xwin
-          xwin --accept-license --cache-dir ./cache/msvc splat --output ./include/msvc
+      - name: Install xwin if not cached
+        run: cargo install xwin --locked
+
+      - name: Cache MSVC headers
+        id: cache-msvc
+        uses: actions/cache@v4
+        with:
+          path: |
+            ./cache/msvc
+            ./include/msvc
+          key: msvc-headers-${{ runner.os }}-v1
+
+      - name: Download MSVC headers if not cached
+        if: steps.cache-msvc.outputs.cache-hit != 'true'
+        run: xwin --accept-license --cache-dir ./cache/msvc splat --output ./include/msvc
 
       - name: Install dependencies
         run: npm install --no-optional

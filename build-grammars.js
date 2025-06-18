@@ -306,8 +306,15 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig = n
     cmd.push(
       '-I', srcDir,
       '-I', grammarDir,
-      '-fPIC',
-      '-fno-exceptions',
+      '-fPIC'
+    );
+
+    // MSVC headers require exceptions to be enabled
+    if (!isWindowsTarget) {
+      cmd.push('-fno-exceptions');
+    }
+
+    cmd.push(
       '-funroll-loops',
       '-fomit-frame-pointer',
       '-ffast-math',
