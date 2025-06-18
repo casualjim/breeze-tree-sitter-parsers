@@ -36,8 +36,11 @@ jobs:
         with:
           version: '0.14.1'
 
-      - name: Install xwin if not cached
+      - name: Install xwin
         run: cargo install xwin --locked
+
+      - name: Install zigbuild
+        run: cargo install cargo-zigbuild --locked
 
       - name: Cache MSVC headers
         id: cache-msvc
@@ -86,7 +89,7 @@ jobs:
         run: |
           rustup target add x86_64-pc-windows-msvc
           cd validation
-          cargo build --release --target x86_64-pc-windows-msvc
+          cargo zigbuild --release --target x86_64-pc-windows-msvc
           echo "✅ Windows binary successfully linked (cross-compilation test)"
 
       - name: Create npm packages
@@ -144,8 +147,7 @@ jobs:
     permissions:
       contents: write
     outputs:
-      new_release: ${{ steps.version-check.outputs.new_release }}
-      version: ${{ steps.version-check.outputs.version }}
+      version: ${{ steps.get-version.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -156,29 +158,18 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Check if version changed
-        id: version-check
+      - name: Get current version
+        id: get-version
         run: |
           CURRENT_VERSION=$(node -p "require('./package.json').version")
           echo "version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
-          
-          # Check if tag already exists
-          if git rev-parse "v$CURRENT_VERSION" >/dev/null 2>&1; then
-            echo "Tag v$CURRENT_VERSION already exists"
-            echo "new_release=false" >> $GITHUB_OUTPUT
-          else
-            echo "Tag v$CURRENT_VERSION does not exist, will create new release"
-            echo "new_release=true" >> $GITHUB_OUTPUT
-          fi
 
       - name: Download artifacts
-        if: steps.version-check.outputs.new_release == 'true'
         uses: actions/download-artifact@v4
         with:
           name: tree-sitter-parsers-all-platforms
 
       - name: Create release archives
-        if: steps.version-check.outputs.new_release == 'true'
         run: |
           # Create archives for each platform
           cd dist
@@ -199,19 +190,17 @@ jobs:
           cd ..
 
       - name: Create git tag
-        if: steps.version-check.outputs.new_release == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git tag -a "v${{ steps.version-check.outputs.version }}" -m "Release v${{ steps.version-check.outputs.version }}"
-          git push origin "v${{ steps.version-check.outputs.version }}"
+          git tag -a "v${{ steps.get-version.outputs.version }}" -m "Release v${{ steps.get-version.outputs.version }}"
+          git push origin "v${{ steps.get-version.outputs.version }}"
 
       - name: Create GitHub Release
-        if: steps.version-check.outputs.new_release == 'true'
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ steps.version-check.outputs.version }}
-          name: Release v${{ steps.version-check.outputs.version }}
+          tag_name: v${{ steps.get-version.outputs.version }}
+          name: Release v${{ steps.get-version.outputs.version }}
           draft: false
           prerelease: false
           files: |
@@ -238,11 +227,11 @@ jobs:
             
             ## Changes
             
-            See [grammars.json](https://github.com/${{ github.repository }}/blob/v${{ steps.version-check.outputs.version }}/grammars.json) for the complete list of included parsers.
+            See [grammars.json](https://github.com/${{ github.repository }}/blob/v${{ steps.get-version.outputs.version }}/grammars.json) for the complete list of included parsers.
 
   publish-npm:
     needs: create-release
-    if: needs.create-release.outputs.new_release == 'true'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -276,6 +265,19 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
+          # Store the version we just released
+          RELEASED_VERSION=$(node -p "require('./package.json').version")
+          
+          # Pull latest changes
+          git pull origin main
+          
+          # Check if version already changed
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          if [ "$CURRENT_VERSION" != "$RELEASED_VERSION" ]; then
+            echo "Version already bumped by another build (current: $CURRENT_VERSION, released: $RELEASED_VERSION)"
+            exit 0
+          fi
+          
           # Bump patch version
           npm version patch --no-git-tag-version
           
@@ -298,7 +300,22 @@ jobs:
           fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
           "
           
-          # Commit and push
+          # Commit and push with lease to prevent race conditions
           git add package.json
-          git commit -m "chore: bump version to $NEW_VERSION for next release [skip ci]"
-          git push origin main
+          git commit -m "chore: bump version to $NEW_VERSION [skip ci]"
+          
+          # Only ignore errors for the push command
+          set +e
+          git push --force-with-lease origin main
+          PUSH_RESULT=$?
+          set -e
+          
+          if [ $PUSH_RESULT -eq 0 ]; then
+            echo "Successfully bumped version to $NEW_VERSION"
+          else
+            echo "Failed to push version bump (likely due to concurrent build)"
+            echo "Version will remain at $CURRENT_VERSION for next manual commit"
+          fi
+          
+          # Always exit successfully - the release already completed
+          exit 0
