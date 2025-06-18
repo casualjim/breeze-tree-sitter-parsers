@@ -88,6 +88,11 @@ jobs:
       - name: Validate Windows build (cross-compilation)
         run: |
           rustup target add x86_64-pc-windows-msvc
+          
+          # Set up include paths for MSVC headers (for both C and C++)
+          export CFLAGS_x86_64_pc_windows_msvc="-I$PWD/include/msvc/crt/include -I$PWD/include/msvc/sdk/include/ucrt -I$PWD/include/msvc/sdk/include/um -I$PWD/include/msvc/sdk/include/shared"
+          export CXXFLAGS_x86_64_pc_windows_msvc="-I$PWD/include/msvc/crt/include -I$PWD/include/msvc/sdk/include/ucrt -I$PWD/include/msvc/sdk/include/um -I$PWD/include/msvc/sdk/include/shared"
+          
           cd validation
           cargo zigbuild --release --target x86_64-pc-windows-msvc
           echo "✅ Windows binary successfully linked (cross-compilation test)"
