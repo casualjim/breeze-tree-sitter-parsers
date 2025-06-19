@@ -29,12 +29,12 @@ const PLATFORMS = {
     rust_target: 'aarch64-unknown-linux-musl',
   },
   'windows-x86_64': {
-    zig_target: 'x86_64-windows-msvc',
-    rust_target: 'x86_64-pc-windows-msvc',
+    zig_target: 'x86_64-windows-gnu',
+    rust_target: 'x86_64-pc-windows-gnu',
   },
   'windows-aarch64': {
-    zig_target: 'aarch64-windows-msvc',
-    rust_target: 'aarch64-pc-windows-msvc',
+    zig_target: 'aarch64-windows-gnu',
+    rust_target: 'aarch64-pc-windows-gnu',
   },
   'macos-x86_64': {
     zig_target: 'x86_64-macos',
@@ -288,31 +288,15 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig = n
       cmd = [compiler, '-O3', '-c'];
     }
 
-    // Add MSVC headers for Windows targets
-    const projectRoot = path.dirname(cacheDir);
-    const msvcPath = path.join(projectRoot, 'include', 'msvc');
-    const isWindowsTarget = platformConfig && (platformConfig.zig_target.includes('windows-msvc'));
-    
-    if (isWindowsTarget && fs.existsSync(msvcPath)) {
-      cmd.push(
-        '-I', path.join(msvcPath, 'crt', 'include'),
-        '-I', path.join(msvcPath, 'sdk', 'include', 'ucrt'),
-        '-I', path.join(msvcPath, 'sdk', 'include', 'um'),
-        '-I', path.join(msvcPath, 'sdk', 'include', 'shared')
-      );
-    }
+
 
     // Common flags
     cmd.push(
       '-I', srcDir,
       '-I', grammarDir,
-      '-fPIC'
+      '-fPIC',
+      '-fno-exceptions'
     );
-
-    // MSVC headers require exceptions to be enabled
-    if (!isWindowsTarget) {
-      cmd.push('-fno-exceptions');
-    }
 
     cmd.push(
       '-funroll-loops',
