@@ -34,8 +34,8 @@ fn get_validation_library_path() -> Result<PathBuf, String> {
         "x86_64-unknown-linux-gnu" => "libtree-sitter-parsers-all-linux-x86_64-glibc.a",
         "aarch64-unknown-linux-musl" => "libtree-sitter-parsers-all-linux-aarch64-musl.a",
         "x86_64-unknown-linux-musl" => "libtree-sitter-parsers-all-linux-x86_64-musl.a",
-        "aarch64-pc-windows-msvc" => "libtree-sitter-parsers-all-windows-aarch64.a",
-        "x86_64-pc-windows-msvc" => "libtree-sitter-parsers-all-windows-x86_64.a",
+        "aarch64-pc-windows-gnu" => "libtree-sitter-parsers-all-windows-aarch64.a",
+        "x86_64-pc-windows-gnu" => "libtree-sitter-parsers-all-windows-x86_64.a",
         _ => {
             return Err(format!("Unsupported target for validation: {}", target));
         }
@@ -94,7 +94,8 @@ fn main() {
     } else if cfg!(target_os = "linux") {
         println!("cargo:rustc-link-lib=stdc++");
     } else if cfg!(target_os = "windows") {
-        // Windows doesn't need explicit C++ runtime linking with MSVC
+        // For MinGW/GNU on Windows
+        println!("cargo:rustc-link-lib=stdc++");
     }
 
     // Load metadata and generate bindings

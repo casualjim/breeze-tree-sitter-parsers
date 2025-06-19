@@ -36,24 +36,8 @@ jobs:
         with:
           version: '0.14.1'
 
-      - name: Install xwin
-        run: cargo install xwin --locked
-
       - name: Install zigbuild
         run: cargo install cargo-zigbuild --locked
-
-      - name: Cache MSVC headers
-        id: cache-msvc
-        uses: actions/cache@v4
-        with:
-          path: |
-            ./cache/msvc
-            ./include/msvc
-          key: msvc-headers-${{ runner.os }}-v1
-
-      - name: Download MSVC headers if not cached
-        if: steps.cache-msvc.outputs.cache-hit != 'true'
-        run: xwin --accept-license --cache-dir ./cache/msvc splat --output ./include/msvc
 
       - name: Install dependencies
         run: npm install --no-optional
@@ -108,6 +92,7 @@ jobs:
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
+          target: x86_64-pc-windows-gnu
 
       - name: Download artifacts
         uses: actions/download-artifact@v4
