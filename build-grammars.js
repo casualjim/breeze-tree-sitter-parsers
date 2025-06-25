@@ -91,7 +91,7 @@ function checkZig() {
     console.log(`Found zig: ${result.trim()}`);
     return true;
   } catch {
-    throw new Error('Zig not found. Please install zig, it\'s a build dependency for cross-compilation.');
+    throw new Error('Zig not found. Please install zig from https://ziglang.org/download/');
   }
 }
 
@@ -202,7 +202,7 @@ async function fetchGrammar(grammar, cacheDir) {
   }
 }
 
-async function compileGrammar(grammar, cacheDir, platformDir, platformConfig = null, useZig = false) {
+async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
   const name = grammar.name;
   const grammarDir = path.join(cacheDir, name);
 
@@ -274,19 +274,13 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig = n
     // Determine if this specific file is C++
     const sourceIsCpp = path.extname(source) === '.cc' || path.extname(source) === '.cpp';
 
-    // Build command for this specific file
-    let cmd;
-    if (useZig && platformConfig) {
-      cmd = sourceIsCpp ? ['zig', 'c++'] : ['zig', 'cc'];
-      cmd.push(
-        '-target', platformConfig.zig_target,
-        '-O3',
-        '-c'
-      );
-    } else {
-      const compiler = sourceIsCpp ? 'c++' : 'cc';
-      cmd = [compiler, '-O3', '-c'];
-    }
+    // Build command for this specific file - always use Zig
+    const cmd = sourceIsCpp ? ['zig', 'c++'] : ['zig', 'cc'];
+    cmd.push(
+      '-target', platformConfig.zig_target,
+      '-O3',
+      '-c'
+    );
 
 
 
@@ -512,16 +506,12 @@ async function main() {
     return;
   }
 
-  // Determine platforms to build
-  const useZig = checkZig();
+  // Check that Zig is installed
+  checkZig();
 
+  // Determine platforms to build
   let platformsToBuild;
   if (options.allPlatforms) {
-    if (!useZig) {
-      console.error('Error: --all-platforms requires zig to be installed');
-      console.error('Install zig from: https://ziglang.org/download/');
-      process.exit(1);
-    }
     platformsToBuild = Object.keys(PLATFORMS);
   } else if (options.platform) {
     if (!PLATFORMS[options.platform]) {
@@ -535,9 +525,9 @@ async function main() {
     if (current && PLATFORMS[current]) {
       platformsToBuild = [current];
     } else {
-      console.log('Warning: Could not detect current platform or it\'s not in the supported list');
-      console.log('Building for generic host platform');
-      platformsToBuild = ['host'];
+      console.error('Error: Could not detect current platform or it\'s not in the supported list');
+      console.error(`Available platforms: ${Object.keys(PLATFORMS).join(', ')}`);
+      process.exit(1);
     }
   }
 
@@ -551,7 +541,10 @@ async function main() {
     }
 
     const platformConfig = PLATFORMS[platformName];
-    const useZigForPlatform = useZig && platformConfig && platformName !== getCurrentPlatform();
+    if (!platformConfig) {
+      console.error(`Error: No configuration found for platform ${platformName}`);
+      process.exit(1);
+    }
 
     const compiledGrammars = [];
     const failedGrammars = [];
@@ -560,7 +553,7 @@ async function main() {
 
     const results = await runInParallel(
       grammars,
-      (grammar) => compileGrammar(grammar, cacheDir, platformDir, platformConfig, useZigForPlatform),
+      (grammar) => compileGrammar(grammar, cacheDir, platformDir, platformConfig),
       options.jobs
     );
 
