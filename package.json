@@ -53,5 +53,5 @@
     "test-distribution:x64": "node test-distribution.js --arch x64",
     "validate": "node validate.js"
   },
-  "version": "0.1.5"
+  "version": "0.1.6"
 }
