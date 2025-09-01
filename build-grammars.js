@@ -100,6 +100,19 @@ async function runCommand(cmd, args, options = {}) {
     const child = spawn(cmd, args, { ...options, stdio: 'pipe' });
     let stdout = '';
     let stderr = '';
+    let finished = false;
+    let timeoutId = null;
+
+    function finalize(err) {
+      if (finished) return;
+      finished = true;
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+      }
+      if (err) return reject(err);
+      resolve({ stdout, stderr });
+    }
 
     if (child.stdout) {
       child.stdout.on('data', (data) => {
@@ -115,23 +128,23 @@ async function runCommand(cmd, args, options = {}) {
 
     child.on('close', (code) => {
       if (code === 0) {
-        resolve({ stdout, stderr });
+        finalize(null);
       } else {
         const error = new Error(`Command failed: ${cmd} ${args.join(' ')}`);
         error.code = code;
         error.stdout = stdout;
         error.stderr = stderr;
-        reject(error);
+        finalize(error);
       }
     });
 
-    child.on('error', reject);
+    child.on('error', (err) => finalize(err));
 
     // Set timeout if specified
     if (options.timeout) {
-      setTimeout(() => {
-        child.kill();
-        reject(new Error(`Command timeout after ${options.timeout}ms`));
+      timeoutId = setTimeout(() => {
+        try { child.kill(); } catch {}
+        finalize(new Error(`Command timeout after ${options.timeout}ms`));
       }, options.timeout);
     }
   });
