@@ -1,6 +1,6 @@
 # Breeze Tree-sitter Parsers
 
-Pre-compiled Tree-sitter parsers for 163 programming languages, distributed as native binaries via npm.
+Pre-compiled Tree-sitter parsers for 170 programming languages, distributed as native binaries via npm.
 
 ## Installation
 
