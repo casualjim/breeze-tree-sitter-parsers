@@ -142,12 +142,6 @@ async function downloadBinaries() {
 }
 
 async function main() {
-  // Skip in CI environments or when explicitly disabled
-  if (process.env.CI || process.env.BREEZE_SKIP_DOWNLOAD) {
-    console.log('Skipping postinstall download.');
-    return;
-  }
-  
   // Check if optional dependency was installed
   const hasOptionalDep = await checkOptionalDependency();
   
