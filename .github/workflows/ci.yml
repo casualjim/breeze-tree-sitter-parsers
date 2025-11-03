@@ -40,6 +40,8 @@ jobs:
         run: cargo install cargo-zigbuild --locked
 
       - name: Install dependencies
+        env:
+          BREEZE_SKIP_DOWNLOAD: '1'
         run: npm install --no-optional
 
       - name: Cache grammar repositories
