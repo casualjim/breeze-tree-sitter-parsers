@@ -3,7 +3,10 @@
     "allow": [
       "Bash(ls:*)",
       "mcp__zread__search_doc",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:results-receiver.actions.githubusercontent.com)",
+      "WebFetch(domain:crates.io)"
     ],
     "deny": []
   },

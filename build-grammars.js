@@ -292,6 +292,7 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
     cmd.push(
       '-target', platformConfig.zig_target,
       '-O3',
+      '-flto',
       '-c'
     );
 
@@ -640,6 +641,10 @@ async function main() {
         try {
           await runCommand(arCmd[0], arCmd.slice(1));
           console.log(`  Created combined archive: ${path.basename(combinedLib)}`);
+
+          // Strip debug symbols from combined archive
+          console.log(`  Stripping debug symbols...`);
+          await runCommand('strip', ['--strip-debug', combinedLib]);
 
           // Clean up temporary files
           fs.rmSync(tempObjDir, { recursive: true, force: true });
