@@ -41,3 +41,15 @@ temp_objects/
 /cache
 /cache/
 /include/
+.bash_profile
+.bashrc
+.gitconfig
+.gitmodules
+.idea
+.mcp.json
+.profile
+.ripgreprc
+.vscode
+.zprofile
+.zshrc
+.claude/

@@ -324,6 +324,12 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
       `-Dscan=ts_${name}_scan`
     );
 
+    // Grammar-specific compile flags
+    if (name === 'just') {
+      // just grammar requires assertions to be enabled
+      cmd.push('-UNDEBUG');
+    }
+
     if (sourceIsCpp) {
       cmd.push('-std=c++14');
     } else {

@@ -136,3 +136,4 @@ The main package uses npm's `optionalDependencies` to install only the relevant 
 ## License
 
 MIT
+we got the language list from https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md

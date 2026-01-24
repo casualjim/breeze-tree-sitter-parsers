@@ -1,8 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "mcp__zread__search_doc",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ],
     "deny": []
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true
   }
 }
