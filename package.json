@@ -25,14 +25,14 @@
   "main": "index.js",
   "name": "@kumos/tree-sitter-parsers",
   "optionalDependencies": {
-    "@kumos/tree-sitter-parsers-darwin-arm64": "0.1.8",
-    "@kumos/tree-sitter-parsers-darwin-x64": "0.1.8",
-    "@kumos/tree-sitter-parsers-linux-arm64": "0.1.8",
-    "@kumos/tree-sitter-parsers-linux-arm64-musl": "0.1.8",
-    "@kumos/tree-sitter-parsers-linux-x64": "0.1.8",
-    "@kumos/tree-sitter-parsers-linux-x64-musl": "0.1.8",
-    "@kumos/tree-sitter-parsers-win32-arm64": "0.1.8",
-    "@kumos/tree-sitter-parsers-win32-x64": "0.1.8"
+    "@kumos/tree-sitter-parsers-darwin-arm64": "0.1.9",
+    "@kumos/tree-sitter-parsers-darwin-x64": "0.1.9",
+    "@kumos/tree-sitter-parsers-linux-arm64": "0.1.9",
+    "@kumos/tree-sitter-parsers-linux-arm64-musl": "0.1.9",
+    "@kumos/tree-sitter-parsers-linux-x64": "0.1.9",
+    "@kumos/tree-sitter-parsers-linux-x64-musl": "0.1.9",
+    "@kumos/tree-sitter-parsers-win32-arm64": "0.1.9",
+    "@kumos/tree-sitter-parsers-win32-x64": "0.1.9"
   },
   "repository": {
     "type": "git",
@@ -53,5 +53,5 @@
     "test-distribution:x64": "node test-distribution.js --arch x64",
     "validate": "node validate.js"
   },
-  "version": "0.1.8"
+  "version": "0.1.9"
 }
