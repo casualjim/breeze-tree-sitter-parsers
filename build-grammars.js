@@ -336,17 +336,8 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
     cmd.push(
       '-target', platformConfig.zig_target,
       '-O3',
-      '-flto'
+      '-c'
     );
-
-    // LTO on macOS requires LLD linker (must come before -c)
-    if (platformConfig.zig_target.includes('macos')) {
-      cmd.push('-fuse-ld=lld');
-    }
-
-    cmd.push('-c');
-
-
 
     // Common flags
     cmd.push(
