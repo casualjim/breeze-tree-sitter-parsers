@@ -3,7 +3,7 @@
   "bin": {
     "tree-sitter-parsers-path": "./bin/tree-sitter-parsers-path.js"
   },
-  "description": "Pre-compiled Tree-sitter parsers for 163 programming languages",
+  "description": "Pre-compiled Tree-sitter parsers for 344 programming languages",
   "devDependencies": {
     "tree-sitter-cli": "^0.25.10"
   },
