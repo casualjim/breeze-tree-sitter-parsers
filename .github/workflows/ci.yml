@@ -3,7 +3,7 @@ name: Build and Release Tree-sitter Parsers
 on:
   # Run weekly to keep cache fresh
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: "0 0 * * 0"
   # Allow manual trigger
   workflow_dispatch:
   # Run on push to main
@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "22"
 
       - name: Setup Rust toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
@@ -33,15 +33,13 @@ jobs:
 
       - name: Install Zig
         uses: goto-bus-stop/setup-zig@v2
-        with:
-          version: '0.14.1'
 
       - name: Install zigbuild
         run: cargo install cargo-zigbuild --locked
 
       - name: Install dependencies
         env:
-          BREEZE_SKIP_DOWNLOAD: '1'
+          BREEZE_SKIP_DOWNLOAD: "1"
         run: npm install --no-optional
 
       - name: Cache grammar repositories
@@ -83,7 +81,6 @@ jobs:
             platforms/
           retention-days: 1
 
-
   validate-windows:
     needs: build-all-platforms
     runs-on: windows-latest
@@ -115,7 +112,7 @@ jobs:
             dist/
             platforms/
           retention-days: 7
-  
+
   test-distribution:
     needs: [build-all-platforms, validate-windows]
     runs-on: ubuntu-latest
@@ -125,7 +122,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "22"
 
       - name: Download artifacts
         uses: actions/download-artifact@v4
@@ -142,7 +139,7 @@ jobs:
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-        
+
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -168,7 +165,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "22"
 
       - name: Get current version
         id: get-version
@@ -191,7 +188,7 @@ jobs:
               platform=${file#libtree-sitter-parsers-all-}
               platform=${platform%.a}
               json_file="grammars-${platform}.json"
-              
+
               if [ -f "$json_file" ]; then
                 tar -czf "${file%.a}.tar.gz" "$file" "$json_file"
               else
@@ -221,24 +218,24 @@ jobs:
             dist/*.json
           body: |
             # Tree-sitter Parsers v${{ steps.version-check.outputs.version }}
-            
+
             Pre-compiled Tree-sitter parsers for 163 programming languages.
-            
+
             ## Installation
-            
+
             ```bash
             npm install @kumos/tree-sitter-parsers
             ```
-            
+
             ## Platform Support
-            
+
             - Linux x64 (glibc and musl)
             - Linux ARM64 (glibc and musl)
             - macOS x64 and ARM64
             - Windows x64 and ARM64
-            
+
             ## Changes
-            
+
             See [grammars.json](https://github.com/${{ github.repository }}/blob/v${{ steps.get-version.outputs.version }}/grammars.json) for the complete list of included parsers.
 
   publish-npm:
@@ -253,8 +250,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Download artifacts
         uses: actions/download-artifact@v4
@@ -276,58 +273,58 @@ jobs:
           # Configure git
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
+
           # Store the version we just released
           RELEASED_VERSION=$(node -p "require('./package.json').version")
-          
+
           # Pull latest changes
           git pull origin main
-          
+
           # Check if version already changed
           CURRENT_VERSION=$(node -p "require('./package.json').version")
           if [ "$CURRENT_VERSION" != "$RELEASED_VERSION" ]; then
             echo "Version already bumped by another build (current: $CURRENT_VERSION, released: $RELEASED_VERSION)"
             exit 0
           fi
-          
+
           # Bump patch version
           npm version patch --no-git-tag-version
-          
+
           # Get new version
           NEW_VERSION=$(node -p "require('./package.json').version")
-          
+
           # Update platform package versions in optionalDependencies
           node -e "
           const fs = require('fs');
           const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
           const newVersion = pkg.version;
-          
+
           // Update all optionalDependencies to new version
           for (const dep in pkg.optionalDependencies) {
             if (dep.startsWith('@kumos/tree-sitter-parsers-')) {
               pkg.optionalDependencies[dep] = newVersion;
             }
           }
-          
+
           fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
           "
-          
+
           # Commit and push with lease to prevent race conditions
           git add package.json
           git commit -m "chore: bump version to $NEW_VERSION [skip ci]"
-          
+
           # Only ignore errors for the push command
           set +e
           git push --force-with-lease origin main
           PUSH_RESULT=$?
           set -e
-          
+
           if [ $PUSH_RESULT -eq 0 ]; then
             echo "Successfully bumped version to $NEW_VERSION"
           else
             echo "Failed to push version bump (likely due to concurrent build)"
             echo "Version will remain at $CURRENT_VERSION for next manual commit"
           fi
-          
+
           # Always exit successfully - the release already completed
           exit 0
