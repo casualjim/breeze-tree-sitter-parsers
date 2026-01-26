@@ -1601,11 +1601,6 @@
       "path": "dialects/terraform"
     },
     {
-      "name": "test",
-      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-test",
-      "rev": "76b419f178da018c29d3004fcbf14f755649eb58"
-    },
-    {
       "name": "textproto",
       "repo": "https://github.com/PorterAtGoogle/tree-sitter-textproto",
       "rev": "568471b80fd8793d37ed01865d8c2208a9fefd1b"
@@ -1720,9 +1715,9 @@
     },
     {
       "name": "v",
-      "repo": "https://github.com/nedpals/tree-sitter-v",
-      "rev": "fee18d64a51127b32a221a56509f77c942d9923f",
-      "branch": "master"
+      "repo": "https://github.com/vlang/v-analyzer",
+      "rev": "9cf6a37689f06b17d170dec644ace81eb8eab280",
+      "path": "tree_sitter_v"
     },
     {
       "name": "vala",
