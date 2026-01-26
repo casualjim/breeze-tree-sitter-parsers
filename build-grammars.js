@@ -231,11 +231,21 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
 
   // If src directory doesn't exist, check if we can generate it
   if (!fs.existsSync(srcDir)) {
-    const grammarJs = path.join(grammarDir, 'grammar.js');
+    // For grammars with a path, check for grammar.js in the subdirectory
+    let grammarJs;
+    if (grammar.path) {
+      grammarJs = path.join(grammarDir, grammar.path, 'grammar.js');
+    } else {
+      grammarJs = path.join(grammarDir, 'grammar.js');
+    }
+
     if (fs.existsSync(grammarJs)) {
+      // Determine the working directory for generate command
+      const genCwd = grammar.path ? path.join(grammarDir, grammar.path) : grammarDir;
+
       try {
         // Try with npx first
-        await runCommand('npx', ['tree-sitter', 'generate'], { cwd: grammarDir });
+        await runCommand('npx', ['tree-sitter', 'generate'], { cwd: genCwd });
         // After generation, check if src directory was created
         if (!fs.existsSync(srcDir)) {
           return { success: false, message: `${name} - src directory not created after generate` };
@@ -243,7 +253,7 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
       } catch {
         // Try without npx
         try {
-          await runCommand('tree-sitter', ['generate'], { cwd: grammarDir });
+          await runCommand('tree-sitter', ['generate'], { cwd: genCwd });
           if (!fs.existsSync(srcDir)) {
             return { success: false, message: `${name} - src directory not created after generate` };
           }
@@ -258,18 +268,28 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
 
   // If parser.c doesn't exist (even after potentially generating src dir), try to generate it
   if (!fs.existsSync(parserC)) {
-    const grammarJs = path.join(grammarDir, 'grammar.js');
+    // For grammars with a path, check for grammar.js in the subdirectory
+    let grammarJs;
+    if (grammar.path) {
+      grammarJs = path.join(grammarDir, grammar.path, 'grammar.js');
+    } else {
+      grammarJs = path.join(grammarDir, 'grammar.js');
+    }
+
     if (fs.existsSync(grammarJs)) {
+      // Determine the working directory for generate command
+      const genCwd = grammar.path ? path.join(grammarDir, grammar.path) : grammarDir;
+
       try {
         // Try with npx first
-        await runCommand('npx', ['tree-sitter', 'generate'], { cwd: grammarDir });
+        await runCommand('npx', ['tree-sitter', 'generate'], { cwd: genCwd });
         if (!fs.existsSync(parserC)) {
           return { success: false, message: `${name} - failed to generate parser.c` };
         }
       } catch {
         // Try without npx
         try {
-          await runCommand('tree-sitter', ['generate'], { cwd: grammarDir });
+          await runCommand('tree-sitter', ['generate'], { cwd: genCwd });
           if (!fs.existsSync(parserC)) {
             return { success: false, message: `${name} - failed to generate parser.c` };
           }
