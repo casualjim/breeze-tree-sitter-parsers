@@ -1,11 +1,11 @@
 [package]
 name = "tree-sitter-parsers-validation"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 build = "build.rs"
 
 [dependencies]
-tree-sitter = "0.25"
+tree-sitter = "0.26"
 tree-sitter-language = "0.1"
 
 [build-dependencies]

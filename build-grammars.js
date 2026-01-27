@@ -215,6 +215,49 @@ async function fetchGrammar(grammar, cacheDir) {
   }
 }
 
+// Prefix symbols in an object file to avoid conflicts when combining grammars
+async function prefixSymbolsInObject(objFile, grammarName) {
+  const prefix = `ts_${grammarName}_`;
+  const redefines = [];
+
+  // Common tree-sitter external scanner functions that need prefixing
+  const externalScannerFuncs = [
+    'tree_sitter_javascript_external_scanner_create',
+    'tree_sitter_javascript_external_scanner_destroy',
+    'tree_sitter_javascript_external_scanner_scan',
+    'tree_sitter_javascript_external_scanner_serialize',
+    'tree_sitter_javascript_external_scanner_deserialize',
+    'tree_sitter_typescript_external_scanner_create',
+    'tree_sitter_typescript_external_scanner_destroy',
+    'tree_sitter_typescript_external_scanner_scan',
+    'tree_sitter_typescript_external_scanner_serialize',
+    'tree_sitter_typescript_external_scanner_deserialize',
+  ];
+
+  // Internal symbols that commonly conflict between grammars
+  const internalSymbols = [
+    'sym_identifier_character_set_1',
+    'sym_identifier_character_set_2',
+    'sym_identifier_character_set_3',
+  ];
+
+  for (const func of externalScannerFuncs) {
+    redefines.push(`--redefine-sym`, `${func}=${prefix}${func}`);
+  }
+
+  for (const sym of internalSymbols) {
+    redefines.push(`--redefine-sym`, `${sym}=${prefix}${sym}`);
+  }
+
+  if (redefines.length > 0) {
+    try {
+      await runCommand('objcopy', redefines.concat(objFile));
+    } catch (error) {
+      // objcopy might fail if symbol doesn't exist or isn't global - that's ok
+    }
+  }
+}
+
 async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
   const name = grammar.name;
   const grammarDir = path.join(cacheDir, name);
@@ -336,6 +379,7 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
     cmd.push(
       '-target', platformConfig.zig_target,
       '-O3',
+      '-fno-lto',
       '-c'
     );
 
@@ -384,6 +428,10 @@ async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
 
     try {
       await runCommand(compileCmd[0], compileCmd.slice(1));
+
+      // Rename symbols to avoid conflicts when combining grammars
+      await prefixSymbolsInObject(objFile, name);
+
       objFiles.push(objFile);
     } catch (error) {
       // Clean up any object files
