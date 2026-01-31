@@ -128,7 +128,7 @@ fn generate_bindings(out_path: &Path, compiled_grammars: &[Grammar]) {
     bindings.push_str("use tree_sitter::Language;\n");
     bindings.push_str("use tree_sitter_language::LanguageFn;\n\n");
 
-    // Generate extern declarations
+    // Generate extern declarations (unsafe extern for Rust 2024 edition)
     for grammar in compiled_grammars {
         let fn_name = if let Some(symbol) = &grammar.symbol_name {
             symbol.clone()
@@ -138,7 +138,7 @@ fn generate_bindings(out_path: &Path, compiled_grammars: &[Grammar]) {
             grammar.name.replace("-", "_")
         };
         bindings.push_str(&format!(
-            "extern \"C\" {{ fn tree_sitter_{}() -> *const (); }}\n",
+            "unsafe extern \"C\" {{ fn tree_sitter_{}() -> *const (); }}\n",
             fn_name
         ));
     }
