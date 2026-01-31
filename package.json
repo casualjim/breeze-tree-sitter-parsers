@@ -5,6 +5,7 @@
   },
   "description": "Pre-compiled Tree-sitter parsers for 344 programming languages",
   "devDependencies": {
+    "p-limit": "^7.2.0",
     "tree-sitter-cli": "^0.25.10"
   },
   "engines": {

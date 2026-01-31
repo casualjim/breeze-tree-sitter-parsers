@@ -85,6 +85,13 @@ function getCurrentPlatform() {
   return `${platformName}-${arch}`;
 }
 
+function grammarCacheDir(cacheDir, grammar) {
+  if (!grammar.rev) {
+    throw new Error(`Missing rev for grammar ${grammar.name}`);
+  }
+  return path.join(cacheDir, grammar.name, grammar.rev);
+}
+
 function checkZig() {
   try {
     const result = execSync('zig version', { encoding: 'utf8' });
@@ -153,7 +160,7 @@ async function runCommand(cmd, args, options = {}) {
 async function fetchGrammar(grammar, cacheDir) {
   const name = grammar.name;
   const repo = grammar.repo;
-  const grammarDir = path.join(cacheDir, name);
+  const grammarDir = grammarCacheDir(cacheDir, grammar);
 
   // Check if directory exists and has content
   if (fs.existsSync(grammarDir)) {
@@ -166,6 +173,8 @@ async function fetchGrammar(grammar, cacheDir) {
       console.log(`  Removing corrupted cache for ${name}`);
     }
   }
+
+  fs.mkdirSync(path.dirname(grammarDir), { recursive: true });
 
   let repoUrl = repo;
   if (!repo.startsWith('http')) {
@@ -260,7 +269,11 @@ async function prefixSymbolsInObject(objFile, grammarName) {
 
 async function compileGrammar(grammar, cacheDir, platformDir, platformConfig) {
   const name = grammar.name;
-  const grammarDir = path.join(cacheDir, name);
+  const grammarDir = grammarCacheDir(cacheDir, grammar);
+
+  if (!fs.existsSync(grammarDir)) {
+    return { success: false, message: `${name} - missing directory (expected ${path.relative(process.cwd(), grammarDir)})` };
+  }
 
   // Determine source directory
   let srcDir;
@@ -590,7 +603,7 @@ async function main() {
     // Check which grammars need fetching
     const needFetch = [];
     for (const grammar of grammars) {
-      const grammarDir = path.join(cacheDir, grammar.name);
+      const grammarDir = grammarCacheDir(cacheDir, grammar);
       if (!fs.existsSync(grammarDir) || !fs.existsSync(path.join(grammarDir, '.git'))) {
         needFetch.push(grammar.name);
       }

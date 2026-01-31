@@ -3,1868 +3,2812 @@
     {
       "name": "actionscript",
       "repo": "https://github.com/Rileran/tree-sitter-actionscript",
-      "rev": "24919034fc78fdf9bedaac6616b6a60af20ab9b5"
+      "rev": "24919034fc78fdf9bedaac6616b6a60af20ab9b5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "ada",
       "repo": "https://github.com/briot/tree-sitter-ada",
       "rev": "6b58259a08b1a22ba0247a7ce30be384db618da6",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "agda",
       "repo": "https://github.com/tree-sitter/tree-sitter-agda",
       "rev": "e8d47a6987effe34d5595baf321d82d3519a8527",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "angular",
       "repo": "https://github.com/dlvandenberg/tree-sitter-angular",
-      "rev": "3bd2036e710f609ea08fcfca5a1eb1169ecc114f"
+      "rev": "3bd2036e710f609ea08fcfca5a1eb1169ecc114f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "apex",
       "repo": "https://github.com/aheber/tree-sitter-sfapex",
       "rev": "3597575a429766dd7ecce9f5bb97f6fec4419d5d",
+      "branch": "main",
       "path": "apex",
-      "branch": "main"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "arduino",
-      "repo": "https://github.com/ObserverOfTime/tree-sitter-arduino",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-arduino",
       "rev": "53eb391da4c6c5857f8defa2c583c46c2594f565",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "asm",
-      "repo": "https://github.com/rush-rs/tree-sitter-asm",
-      "rev": "839741fef4dab5128952334624905c82b40c7133"
+      "repo": "https://github.com/RubixDev/tree-sitter-asm",
+      "rev": "839741fef4dab5128952334624905c82b40c7133",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/asm/highlights.scm"
     },
     {
       "name": "astro",
       "repo": "https://github.com/virchau13/tree-sitter-astro",
       "rev": "213f6e6973d9b456c6e50e86f19f66877e7ef0ee",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "authzed",
       "repo": "https://github.com/mleonidas/tree-sitter-authzed",
-      "rev": "83e5c26a8687eb4688fe91d690c735cc3d21ad81"
+      "rev": "83e5c26a8687eb4688fe91d690c735cc3d21ad81",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "awk",
       "repo": "https://github.com/Beaglefoot/tree-sitter-awk",
       "rev": "34bbdc7cce8e803096f47b625979e34c1be38127",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "bash",
       "repo": "https://github.com/tree-sitter/tree-sitter-bash",
       "rev": "a06c2e4415e9bc0346c6b86d401879ffb44058f7",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "bass",
       "repo": "https://github.com/vito/tree-sitter-bass",
-      "rev": "28dc7059722be090d04cd751aed915b2fee2f89a"
+      "rev": "28dc7059722be090d04cd751aed915b2fee2f89a",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/nvim/highlights.scm"
     },
     {
       "name": "beancount",
       "repo": "https://github.com/polarmutex/tree-sitter-beancount",
       "rev": "23b21252da8b8cb0f03d1d1fc4c8f87d407e1cdf",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "bibtex",
       "repo": "https://github.com/latex-lsp/tree-sitter-bibtex",
       "rev": "8d04ed27b3bc7929f14b7df9236797dab9f3fa66",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "bicep",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-bicep",
-      "rev": "bff59884307c0ab009bd5e81afd9324b46a6c0f9"
+      "rev": "bff59884307c0ab009bd5e81afd9324b46a6c0f9",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "bitbake",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-bitbake",
-      "rev": "a5d04fdb5a69a02b8fa8eb5525a60dfb5309b73b"
+      "rev": "a5d04fdb5a69a02b8fa8eb5525a60dfb5309b73b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "blade",
       "repo": "https://github.com/EmranMR/tree-sitter-blade",
-      "rev": "cc764dadcbbceb3f259396fef66f970c72e94f96"
+      "rev": "cc764dadcbbceb3f259396fef66f970c72e94f96",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "bpftrace",
       "repo": "https://github.com/sgruszka/tree-sitter-bpftrace",
-      "rev": "0978030fdcdab74d49faaee2a60eb94607a367cc"
+      "rev": "0978030fdcdab74d49faaee2a60eb94607a367cc",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "brightscript",
       "repo": "https://github.com/ajdelcimmuto/tree-sitter-brightscript",
-      "rev": "253fdfaa23814cb46c2d5fc19049fa0f2f62c6da"
+      "rev": "253fdfaa23814cb46c2d5fc19049fa0f2f62c6da",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "blueprint",
       "repo": "https://gitlab.com/gabmus/tree-sitter-blueprint.git",
-      "rev": "355ef84ef8a958ac822117b652cf4d49bac16c79"
+      "rev": "355ef84ef8a958ac822117b652cf4d49bac16c79",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "bp",
       "repo": "https://github.com/ambroisie/tree-sitter-bp",
-      "rev": "ee641d15390183d7535777947ce0f2f1fbcee69f"
+      "rev": "ee641d15390183d7535777947ce0f2f1fbcee69f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "c",
       "repo": "https://github.com/tree-sitter/tree-sitter-c",
       "rev": "ae19b676b13bdcc13b7665397e6d9b14975473dd",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "c3",
       "repo": "https://github.com/c3lang/tree-sitter-c3",
-      "rev": "2c04e7858d63497152d42f08d3067972618aeedc"
+      "rev": "7ef54adef1008ce7d943c2cca03aee93a79b2252",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "c_sharp",
       "repo": "https://github.com/tree-sitter/tree-sitter-c-sharp",
       "rev": "f05a2ca99d329de2e6c32f26a21c6169b2bfcbb7",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "cairo",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-cairo",
-      "rev": "6238f609bea233040fe927858156dee5515a0745"
+      "rev": "6238f609bea233040fe927858156dee5515a0745",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "caddy",
       "repo": "https://github.com/opa-oz/tree-sitter-caddy",
-      "rev": "9b3fde99d3d74345b85b655a6d8065e004fbe26f"
+      "rev": "2686186edb61be47960431c93a204fb249681360",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "capnp",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-capnp",
-      "rev": "7b0883c03e5edd34ef7bcf703194204299d7099f"
+      "rev": "7b0883c03e5edd34ef7bcf703194204299d7099f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "chatito",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-chatito",
-      "rev": "c0ed82c665b732395073f635c74c300f09530a7f"
+      "rev": "c0ed82c665b732395073f635c74c300f09530a7f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "circom",
       "repo": "https://github.com/Decurity/tree-sitter-circom",
-      "rev": "02150524228b1e6afef96949f2d6b7cc0aaf999e"
+      "rev": "02150524228b1e6afef96949f2d6b7cc0aaf999e",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "clarity",
       "repo": "https://github.com/xlittlerag/tree-sitter-clarity",
-      "rev": "cbb3ffe8688aca558286fd45ed46857a1f3207bb"
+      "rev": "cbb3ffe8688aca558286fd45ed46857a1f3207bb",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "clojure",
       "repo": "https://github.com/sogaiu/tree-sitter-clojure",
       "rev": "e43eff80d17cf34852dcd92ca5e6986d23a7040f",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "cmake",
       "repo": "https://github.com/uyha/tree-sitter-cmake",
       "rev": "c7b2a71e7f8ecb167fad4c97227c838439280175",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "comment",
       "repo": "https://github.com/stsewd/tree-sitter-comment",
       "rev": "66272d2b6c73fb61157541b69dd0a7ce7b42a5ad",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "commonlisp",
-      "repo": "https://github.com/theHamsta/tree-sitter-commonlisp",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
       "rev": "32323509b3d9fe96607d151c2da2c9009eb13a2f",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "cooklang",
       "repo": "https://github.com/addcninblue/tree-sitter-cooklang",
       "rev": "4ebe237c1cf64cf3826fc249e9ec0988fe07e58e",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "corn",
       "repo": "https://github.com/jakestanger/tree-sitter-corn",
       "rev": "464654742cbfd3a3de560aba120998f1d5dfa844",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "cpon",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-cpon",
-      "rev": "594289eadfec719198e560f9d7fd243c4db678d5"
+      "rev": "594289eadfec719198e560f9d7fd243c4db678d5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "cpp",
       "repo": "https://github.com/tree-sitter/tree-sitter-cpp",
       "rev": "12bd6f7e96080d2e70ec51d4068f2f66120dde35",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "css",
       "repo": "https://github.com/tree-sitter/tree-sitter-css",
       "rev": "dda5cfc5722c429eaba1c910ca32c2c0c5bb1a3f",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "csv",
-      "repo": "https://github.com/amaanq/tree-sitter-csv",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
       "rev": "f6bf6e35eb0b95fbadea4bb39cb9709507fcb181",
+      "branch": "master",
       "path": "csv",
-      "branch": "master"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "cuda",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-cuda",
-      "rev": "48b066f334f4cf2174e05a50218ce2ed98b6fd01"
+      "rev": "48b066f334f4cf2174e05a50218ce2ed98b6fd01",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "cue",
       "repo": "https://github.com/eonpatapon/tree-sitter-cue",
-      "rev": "770737bcff2c4aa3f624d439e32b07dbb07102d3"
+      "rev": "770737bcff2c4aa3f624d439e32b07dbb07102d3",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "cylc",
       "repo": "https://github.com/elliotfontaine/tree-sitter-cylc",
-      "rev": "6d1d81137112299324b526477ce1db989ab58fb8"
+      "rev": "6d1d81137112299324b526477ce1db989ab58fb8",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "d",
       "repo": "https://github.com/gdamore/tree-sitter-d",
-      "rev": "fb028c8f14f4188286c2eef143f105def6fbf24f"
+      "rev": "fb028c8f14f4188286c2eef143f105def6fbf24f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "dart",
       "repo": "https://github.com/UserNobody14/tree-sitter-dart",
       "rev": "d4d8f3e337d8be23be27ffc35a0aef972343cd54",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "desktop",
       "repo": "https://github.com/ValdezFOmar/tree-sitter-desktop",
       "rev": "137292ae28e05011dbc7c5c383e2b25db1cf77c9",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/desktop/highlights.scm"
     },
     {
       "name": "devicetree",
       "repo": "https://github.com/joelspadin/tree-sitter-devicetree",
-      "rev": "e685f1f6ac1702b046415efb476444167d63e41a"
+      "rev": "e685f1f6ac1702b046415efb476444167d63e41a",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "dhall",
       "repo": "https://github.com/jbellerb/tree-sitter-dhall",
       "rev": "62013259b26ac210d5de1abf64cf1b047ef88000",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "diff",
-      "repo": "https://github.com/the-mikedavis/tree-sitter-diff",
-      "rev": "2520c3f934b3179bb540d23e0ef45f75304b5fed"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-diff",
+      "rev": "2520c3f934b3179bb540d23e0ef45f75304b5fed",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "disassembly",
       "repo": "https://github.com/ColinKennedy/tree-sitter-disassembly",
       "rev": "0229c0211dba909c5d45129ac784a3f4d49c243a",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "djot",
       "repo": "https://github.com/treeman/tree-sitter-djot",
       "rev": "74fac1f53c6d52aeac104b6874e5506be6d0cfe6",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "dockerfile",
       "repo": "https://github.com/camdencheek/tree-sitter-dockerfile",
-      "rev": "971acdd908568b4531b0ba28a445bf0bb720aba5"
+      "rev": "971acdd908568b4531b0ba28a445bf0bb720aba5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "dot",
       "repo": "https://github.com/rydesun/tree-sitter-dot",
-      "rev": "80327abbba6f47530edeb0df9f11bd5d5c93c14d"
+      "rev": "80327abbba6f47530edeb0df9f11bd5d5c93c14d",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "doxygen",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-doxygen",
       "rev": "ccd998f378c3f9345ea4eeb223f56d7b84d16687",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "dtd",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
       "rev": "5000ae8f22d11fbe93939b05c1e37cf21117162d",
-      "path": "dtd"
+      "path": "dtd",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml"
     },
     {
       "name": "earthfile",
       "repo": "https://github.com/glehmann/tree-sitter-earthfile",
       "rev": "5baef88717ad0156fd29a8b12d0d8245bb1096a8",
-      "branch": "stable"
+      "branch": "stable",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ebnf",
       "repo": "https://github.com/RubixDev/ebnf",
       "rev": "8e635b0b723c620774dfb8abf382a7f531894b40",
-      "path": "crates/tree-sitter-ebnf"
+      "path": "crates/tree-sitter-ebnf",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "editorconfig",
       "repo": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
-      "rev": "851f2c2483239ce62f919bf3408ccd20dc0b5c01"
+      "rev": "851f2c2483239ce62f919bf3408ccd20dc0b5c01",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/editorconfig/highlights.scm"
     },
     {
       "name": "eds",
       "repo": "https://github.com/uyha/tree-sitter-eds",
-      "rev": "26d529e6cfecde391a03c21d1474eb51e0285805"
+      "rev": "26d529e6cfecde391a03c21d1474eb51e0285805",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "eex",
       "repo": "https://github.com/connorlay/tree-sitter-eex",
-      "rev": "f742f2fe327463335e8671a87c0b9b396905d1d1"
+      "rev": "f742f2fe327463335e8671a87c0b9b396905d1d1",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "elisp",
       "repo": "https://github.com/Wilfred/tree-sitter-elisp",
-      "rev": "29b4e49275f4a947ce17c8533bc20a1f97768c70"
+      "rev": "29b4e49275f4a947ce17c8533bc20a1f97768c70",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "elixir",
       "repo": "https://github.com/elixir-lang/tree-sitter-elixir",
-      "rev": "d24cecee673c4c770f797bac6f87ae4b6d7ddec5"
+      "rev": "d24cecee673c4c770f797bac6f87ae4b6d7ddec5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "elm",
-      "repo": "https://github.com/razzeee/tree-sitter-elm",
-      "rev": "6d9511c28181db66daee4e883f811f6251220943"
+      "repo": "https://github.com/elm-tooling/tree-sitter-elm",
+      "rev": "6d9511c28181db66daee4e883f811f6251220943",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "elsa",
       "repo": "https://github.com/glapa-grossklag/tree-sitter-elsa",
-      "rev": "0a66b2b3f3c1915e67ad2ef9f7dbd2a84820d9d7"
+      "rev": "0a66b2b3f3c1915e67ad2ef9f7dbd2a84820d9d7",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "elvish",
       "repo": "https://github.com/elves/tree-sitter-elvish",
-      "rev": "5e7210d945425b77f82cbaebc5af4dd3e1ad40f5"
+      "rev": "5e7210d945425b77f82cbaebc5af4dd3e1ad40f5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "embedded_template",
       "repo": "https://github.com/tree-sitter/tree-sitter-embedded-template",
       "rev": "3499d85f0a0d937c507a4a65368f2f63772786e1",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "enforce",
       "repo": "https://github.com/simonvic/tree-sitter-enforce",
-      "rev": "eb2796871d966264cdb041b797416ef1757c8b4f"
+      "rev": "eb2796871d966264cdb041b797416ef1757c8b4f",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "erlang",
       "repo": "https://github.com/WhatsApp/tree-sitter-erlang",
-      "rev": "f21023bbd6cd30cadbc793d80ae4d990d9be86fc"
+      "rev": "f21023bbd6cd30cadbc793d80ae4d990d9be86fc",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "facility",
       "repo": "https://github.com/FacilityApi/tree-sitter-facility",
       "rev": "e4bfd3e960de9f4b4648acb1c92e9b95b47d8cfb",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "faust",
       "repo": "https://github.com/khiner/tree-sitter-faust",
-      "rev": "122dd101919289ea809bad643712fcb483a1bed0"
+      "rev": "122dd101919289ea809bad643712fcb483a1bed0",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "fennel",
-      "repo": "https://github.com/TravonteD/tree-sitter-fennel",
-      "rev": "36eb796a84b4f57bdf159d0a99267260d4960c89",
-      "branch": "master"
+      "repo": "https://github.com/alexmozaidze/tree-sitter-fennel",
+      "rev": "3f0f6b24d599e92460b969aabc4f4c5a914d15a0",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "fidl",
       "repo": "https://github.com/google/tree-sitter-fidl",
-      "rev": "0a8910f293268e27ff554357c229ba172b0eaed2"
+      "rev": "0a8910f293268e27ff554357c229ba172b0eaed2",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "fsh",
       "repo": "https://github.com/mgramigna/tree-sitter-fsh",
-      "rev": "fad2e175099a45efbc98f000cc196d3674cc45e0"
+      "rev": "fad2e175099a45efbc98f000cc196d3674cc45e0",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "firrtl",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-firrtl",
-      "rev": "8503d3a0fe0f9e427863cb0055699ff2d29ae5f5"
+      "rev": "8503d3a0fe0f9e427863cb0055699ff2d29ae5f5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "fish",
       "repo": "https://github.com/ram02z/tree-sitter-fish",
       "rev": "aa074a0bacde8b5823c592574d7138f156a95776",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "foam",
       "repo": "https://github.com/FoamScience/tree-sitter-foam",
       "rev": "472c24f11a547820327fb1be565bcfff98ea96a4",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "forth",
       "repo": "https://github.com/AlexanderBrevig/tree-sitter-forth",
-      "rev": "360ef13f8c609ec6d2e80782af69958b84e36cd0"
+      "rev": "360ef13f8c609ec6d2e80782af69958b84e36cd0",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "fortran",
       "repo": "https://github.com/stadelmanma/tree-sitter-fortran",
       "rev": "43cd127cd41ff6e57b3ececb3cc283c5af4796e7",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "fsharp",
       "repo": "https://github.com/ionide/tree-sitter-fsharp",
       "rev": "5141851c278a99958469eb1736c7afc4ec738e47",
+      "branch": "main",
       "path": "fsharp",
-      "branch": "main"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml"
     },
     {
       "name": "fsharp_signature",
       "repo": "https://github.com/ionide/tree-sitter-fsharp",
       "rev": "5141851c278a99958469eb1736c7afc4ec738e47",
+      "branch": "main",
       "path": "fsharp_signature",
-      "branch": "main"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml"
     },
     {
       "name": "func",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-func",
-      "rev": "f780ca55e65e7d7360d0229331763e16c452fc98"
+      "rev": "f780ca55e65e7d7360d0229331763e16c452fc98",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "fusion",
       "repo": "https://gitlab.com/jirgn/tree-sitter-fusion.git",
-      "rev": "19db2f47ba4c3a0f6238d4ae0e2abfca16e61dd6"
+      "rev": "19db2f47ba4c3a0f6238d4ae0e2abfca16e61dd6",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gap",
       "repo": "https://github.com/gap-system/tree-sitter-gap",
-      "rev": "96c8ccd88be1df4d22462d586dd71b5873e55902"
+      "rev": "2bac14863b76ad0ff6fd7204c50574732acd66df",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gaptst",
       "repo": "https://github.com/gap-system/tree-sitter-gaptst",
-      "rev": "69086d7627c03e1f4baf766bcef14c60d9e92331"
+      "rev": "69086d7627c03e1f4baf766bcef14c60d9e92331",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gdscript",
       "repo": "https://github.com/PrestonKnopp/tree-sitter-gdscript",
-      "rev": "89e66b6bdc002ab976283f277cbb48b780c5d0e9",
-      "branch": "master"
+      "rev": "9686853b696db07118ad110e440d6de0ca6498b4",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "gdshader",
       "repo": "https://github.com/airblast-dev/tree-sitter-gdshader",
       "rev": "68268631c8b6dc093985f1246b099f81b30ea7d1",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "git_config",
       "repo": "https://github.com/the-mikedavis/tree-sitter-git-config",
-      "rev": "0fbc9f99d5a28865f9de8427fb0672d66f9d83a5"
+      "rev": "0fbc9f99d5a28865f9de8427fb0672d66f9d83a5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "git_rebase",
       "repo": "https://github.com/the-mikedavis/tree-sitter-git-rebase",
-      "rev": "bff4b66b44b020d918d67e2828eada1974a966aa"
+      "rev": "bff4b66b44b020d918d67e2828eada1974a966aa",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gitattributes",
-      "repo": "https://github.com/ObserverOfTime/tree-sitter-gitattributes",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-gitattributes",
       "rev": "1b7af09d45b579f9f288453b95ad555f1f431645",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gitcommit",
       "repo": "https://github.com/gbprod/tree-sitter-gitcommit",
-      "rev": "a716678c0f00645fed1e6f1d0eb221481dbd6f6d"
+      "rev": "a716678c0f00645fed1e6f1d0eb221481dbd6f6d",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gitignore",
       "repo": "https://github.com/shunsambongi/tree-sitter-gitignore",
-      "rev": "f4685bf11ac466dd278449bcfe5fd014e94aa504"
+      "rev": "f4685bf11ac466dd278449bcfe5fd014e94aa504",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "gleam",
       "repo": "https://github.com/gleam-lang/tree-sitter-gleam",
-      "rev": "dd4e328c5fd5f158d47a22339d8ce0f8be918a0b"
+      "rev": "dd4e328c5fd5f158d47a22339d8ce0f8be918a0b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "glimmer_javascript",
       "repo": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript",
-      "rev": "5cc865a2a0a77cbfaf5062c8fcf2a9919bd54f87"
+      "rev": "5cc865a2a0a77cbfaf5062c8fcf2a9919bd54f87",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/glimmer_javascript/highlights.scm"
     },
     {
       "name": "glimmer_typescript",
       "repo": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript",
-      "rev": "12d98944c1d5077b957cbdb90d663a7c4d50118c"
+      "rev": "12d98944c1d5077b957cbdb90d663a7c4d50118c",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/glimmer_typescript/highlights.scm"
     },
     {
       "name": "glsl",
-      "repo": "https://github.com/theHamsta/tree-sitter-glsl",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-glsl",
       "rev": "24a6c8ef698e4480fecf8340d771fbcb5de8fbb4",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "glimmer",
       "repo": "https://github.com/ember-tooling/tree-sitter-glimmer",
-      "rev": "88af85568bde3b91acb5d4c352ed094d0c1f9d84"
+      "rev": "88af85568bde3b91acb5d4c352ed094d0c1f9d84",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/glimmer/highlights.scm"
     },
     {
       "name": "gn",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-gn",
-      "rev": "bc06955bc1e3c9ff8e9b2b2a55b38b94da923c05"
+      "rev": "bc06955bc1e3c9ff8e9b2b2a55b38b94da923c05",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gnuplot",
       "repo": "https://github.com/dpezto/tree-sitter-gnuplot",
-      "rev": "8923c1e38b9634a688a6c0dce7c18c8ffb823e79"
+      "rev": "8923c1e38b9634a688a6c0dce7c18c8ffb823e79",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "go",
       "repo": "https://github.com/tree-sitter/tree-sitter-go",
       "rev": "2346a3ab1bb3857b48b29d779a1ef9799a248cd7",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "goctl",
       "repo": "https://github.com/chaozwn/tree-sitter-goctl",
-      "rev": "49c43532689fe1f53e8b9e009d0521cab02c432b"
+      "rev": "49c43532689fe1f53e8b9e009d0521cab02c432b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "gomod",
       "repo": "https://github.com/camdencheek/tree-sitter-go-mod",
-      "rev": "2e886870578eeba1927a2dc4bd2e2b3f598c5f9a"
+      "rev": "2e886870578eeba1927a2dc4bd2e2b3f598c5f9a",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gosum",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-go-sum",
-      "rev": "27816eb6b7315746ae9fcf711e4e1396dc1cf237"
+      "rev": "27816eb6b7315746ae9fcf711e4e1396dc1cf237",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gotmpl",
       "repo": "https://github.com/ngalaiko/tree-sitter-go-template",
       "rev": "04270cd3512e2c7de0c5f2823725d7b0c4c01fda",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gowork",
       "repo": "https://github.com/omertuc/tree-sitter-go-work",
-      "rev": "949a8a470559543857a62102c84700d291fc984c"
+      "rev": "949a8a470559543857a62102c84700d291fc984c",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "godot_resource",
       "repo": "https://github.com/PrestonKnopp/tree-sitter-godot-resource",
-      "rev": "302c1895f54bf74d53a08572f7b26a6614209adc"
+      "rev": "302c1895f54bf74d53a08572f7b26a6614209adc",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "gpg",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
       "rev": "4024eb268c59204280f8ac71ef146b8ff5e737f6",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "graphql",
       "repo": "https://github.com/bkegley/tree-sitter-graphql",
-      "rev": "5e66e961eee421786bdda8495ed1db045e06b5fe"
+      "rev": "5e66e961eee421786bdda8495ed1db045e06b5fe",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/graphql/highlights.scm"
     },
     {
       "name": "gren",
       "repo": "https://github.com/MaeBrooks/tree-sitter-gren",
-      "rev": "c36aac51a915fdfcaf178128ba1e9c2205b25930"
+      "rev": "c36aac51a915fdfcaf178128ba1e9c2205b25930",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "groovy",
-      "repo": "https://github.com/Decodetalkers/tree-sitter-groovy",
-      "rev": "679459be70d7fbac175fb19f668948d57b3825ef",
-      "branch": "gh-pages"
+      "repo": "https://github.com/murtaza64/tree-sitter-groovy",
+      "rev": "86911590a8e46d71301c66468e5620d9faa5b6af",
+      "branch": "gh-pages",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "groq",
       "repo": "https://github.com/ajrussellaudio/tree-sitter-groq",
-      "rev": "1fa1ab0eb391a270957e8ad8c731b492e3645649"
+      "rev": "1fa1ab0eb391a270957e8ad8c731b492e3645649",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "gstlaunch",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch",
-      "rev": "549aef253fd38a53995cda1bf55c501174372bf7"
+      "rev": "549aef253fd38a53995cda1bf55c501174372bf7",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "hack",
       "repo": "https://github.com/slackhq/tree-sitter-hack",
-      "rev": "1a7ded90288189746c54861ac144ede97df95081"
+      "rev": "1a7ded90288189746c54861ac144ede97df95081",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "hare",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-hare",
-      "rev": "eed7ddf6a66b596906aa8ca3d40521b8278adc6f"
+      "rev": "eed7ddf6a66b596906aa8ca3d40521b8278adc6f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "haskell",
-      "repo": "https://github.com/tree-sitter/tree-sitter-haskell",
-      "rev": "0975ef72fc3c47b530309ca93937d7d143523628",
-      "branch": "master"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-haskell",
+      "rev": "7fa19f195803a77855f036ee7f49e4b22856e338",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "haskell_persistent",
       "repo": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
       "rev": "577259b4068b2c281c9ebf94c109bd50a74d5857",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "haxe",
       "repo": "https://github.com/vantreeseba/tree-sitter-haxe",
-      "rev": "a55f3e2cf1e4449200fd089a80d3af642bcf5f94"
+      "rev": "a55f3e2cf1e4449200fd089a80d3af642bcf5f94",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "hcl",
-      "repo": "https://github.com/MichaHoffmann/tree-sitter-hcl",
-      "rev": "64ad62785d442eb4d45df3a1764962dafd5bc98b"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-hcl",
+      "rev": "64ad62785d442eb4d45df3a1764962dafd5bc98b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "heex",
-      "repo": "https://github.com/phoenixframework/tree-sitter-heex",
-      "rev": "b5a7cb5f74dc695a9ff5f04919f872ebc7a895e9"
+      "repo": "https://github.com/connorlay/tree-sitter-heex",
+      "rev": "b5a7cb5f74dc695a9ff5f04919f872ebc7a895e9",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "helm",
       "repo": "https://github.com/ngalaiko/tree-sitter-go-template",
       "rev": "04270cd3512e2c7de0c5f2823725d7b0c4c01fda",
       "branch": "master",
+      "path": "dialects/helm",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
       "symbol_name": "go_template"
     },
     {
       "name": "hexdump",
       "repo": "https://github.com/rush-rs/tree-sitter-hexdump",
-      "rev": "09eaf4fcfed00be93928d7d3d82b490cd1343b80"
+      "rev": "09eaf4fcfed00be93928d7d3d82b490cd1343b80",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/hexdump/highlights.scm"
     },
     {
       "name": "hjson",
       "repo": "https://github.com/winston0410/tree-sitter-hjson",
       "rev": "02fa3b79b3ff9a296066da6277adfc3f26cbc9e0",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "hlsl",
-      "repo": "https://github.com/theHamsta/tree-sitter-hlsl",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-hlsl",
       "rev": "bab9111922d53d43668fabb61869bec51bbcb915",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "hlsplaylist",
       "repo": "https://github.com/Freed-Wu/tree-sitter-hlsplaylist",
-      "rev": "3bfda9271e3adb08d35f47a2102fe957009e1c55"
+      "rev": "3bfda9271e3adb08d35f47a2102fe957009e1c55",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "hocon",
       "repo": "https://github.com/antosha417/tree-sitter-hocon",
       "rev": "c390f10519ae69fdb03b3e5764f5592fb6924bcc",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "hoon",
       "repo": "https://github.com/urbit-pilled/tree-sitter-hoon",
       "rev": "1545137aadcc63660c47db9ad98d02fa602655d0",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "html",
       "repo": "https://github.com/tree-sitter/tree-sitter-html",
       "rev": "73a3947324f6efddf9e17c0ea58d454843590cc0",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "htmldjango",
       "repo": "https://github.com/interdependence/tree-sitter-htmldjango",
-      "rev": "3a643167ad9afac5d61e092f08ff5b054576fadf"
+      "rev": "3a643167ad9afac5d61e092f08ff5b054576fadf",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "http",
       "repo": "https://github.com/rest-nvim/tree-sitter-http",
-      "rev": "db8b4398de90b6d0b6c780aba96aaa2cd8e9202c"
+      "rev": "db8b4398de90b6d0b6c780aba96aaa2cd8e9202c",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "hurl",
       "repo": "https://github.com/pfeiferj/tree-sitter-hurl",
-      "rev": "597efbd7ce9a814bb058f48eabd055b1d1e12145"
+      "rev": "597efbd7ce9a814bb058f48eabd055b1d1e12145",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "hyprlang",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
       "rev": "22723f25f3faf329863d952c9601b492afd971c9",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/hyprlang/highlights.scm"
     },
     {
       "name": "idl",
       "repo": "https://github.com/cathaysia/tree-sitter-idl",
       "rev": "e6b8b4d2ba285caacf6f9e931f1f637f5bc02b03",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "idris",
       "repo": "https://github.com/kayhide/tree-sitter-idris",
-      "rev": "c56a25cf57c68ff929356db25505c1cc4c7820f6"
+      "rev": "c56a25cf57c68ff929356db25505c1cc4c7820f6",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ini",
       "repo": "https://github.com/justinmk/tree-sitter-ini",
       "rev": "e4018b5176132b4f3c5d6e61cea383f42288d0f5",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "inko",
       "repo": "https://github.com/inko-lang/tree-sitter-inko",
-      "rev": "5c1226a901341f0a6f52924a5c2584b5e2df1119"
+      "rev": "v0.5.1",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ispc",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-ispc",
-      "rev": "9b2f9aec2106b94b4e099fe75e73ebd8ae707c04"
+      "rev": "9b2f9aec2106b94b4e099fe75e73ebd8ae707c04",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "janet",
       "repo": "https://github.com/GrayJack/tree-sitter-janet",
       "rev": "64db751b233ba44ce06fa6c729701bdf87779011",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "janet_simple",
       "repo": "https://github.com/sogaiu/tree-sitter-janet-simple",
       "rev": "7e28cbf1ca061887ea43591a2898001f4245fddf",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "java",
       "repo": "https://github.com/tree-sitter/tree-sitter-java",
       "rev": "e10607b45ff745f5f876bfa3e94fbcc6b44bdc11",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "javadoc",
       "repo": "https://github.com/rmuir/tree-sitter-javadoc",
-      "rev": "141525e73c9ad2fe7df8861047d4068ddbb6c337"
+      "rev": "141525e73c9ad2fe7df8861047d4068ddbb6c337",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "javascript",
       "repo": "https://github.com/tree-sitter/tree-sitter-javascript",
       "rev": "58404d8cf191d69f2674a8fd507bd5776f46cb11",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "jq",
       "repo": "https://github.com/flurie/tree-sitter-jq",
-      "rev": "c204e36d2c3c6fce1f57950b12cabcc24e5cc4d9"
+      "rev": "c204e36d2c3c6fce1f57950b12cabcc24e5cc4d9",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "jinja",
       "repo": "https://github.com/cathaysia/tree-sitter-jinja",
       "rev": "e589222a1ad44361bc376d5abdccd08e1fecfee5",
-      "path": "tree-sitter-jinja"
+      "path": "tree-sitter-jinja",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "jinja_inline",
       "repo": "https://github.com/cathaysia/tree-sitter-jinja",
       "rev": "e589222a1ad44361bc376d5abdccd08e1fecfee5",
-      "path": "tree-sitter-jinja_inline"
+      "path": "tree-sitter-jinja_inline",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "jsdoc",
       "repo": "https://github.com/tree-sitter/tree-sitter-jsdoc",
       "rev": "658d18dcdddb75c760363faa4963427a7c6b52db",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "json",
       "repo": "https://github.com/tree-sitter/tree-sitter-json",
       "rev": "001c28d7a29832b06b0e831ec77845553c89b56d",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "json5",
       "repo": "https://github.com/Joakker/tree-sitter-json5",
-      "rev": "aa630ef48903ab99e406a8acd2e2933077cc34e1"
+      "rev": "aa630ef48903ab99e406a8acd2e2933077cc34e1",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "jsonc",
       "repo": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc",
-      "rev": "02b01653c8a1c198ae7287d566efa86a135b30d5"
+      "rev": "02b01653c8a1c198ae7287d566efa86a135b30d5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "jsonnet",
       "repo": "https://github.com/sourcegraph/tree-sitter-jsonnet",
-      "rev": "ddd075f1939aed8147b7aa67f042eda3fce22790"
+      "rev": "ddd075f1939aed8147b7aa67f042eda3fce22790",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "julia",
       "repo": "https://github.com/tree-sitter/tree-sitter-julia",
-      "rev": "e0f9dcd180fdcfcfa8d79a3531e11d99e79321d3",
-      "branch": "master"
+      "rev": "3c1bd7c6c1a7442506b040d17500b69ad52209cd",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "just",
       "repo": "https://github.com/IndianBoy42/tree-sitter-just",
-      "rev": "7333f8c150aaac5bb46decc2d225a2d4cde8c51e"
+      "rev": "7333f8c150aaac5bb46decc2d225a2d4cde8c51e",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/just/highlights.scm"
     },
     {
       "name": "kcl",
       "repo": "https://github.com/kcl-lang/tree-sitter-kcl",
-      "rev": "b0b2eb38009e04035a6e266c7e11e541f3caab7c"
+      "rev": "b0b2eb38009e04035a6e266c7e11e541f3caab7c",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "kconfig",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-kconfig",
-      "rev": "9ac99fe4c0c27a35dc6f757cef534c646e944881"
+      "rev": "9ac99fe4c0c27a35dc6f757cef534c646e944881",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "kdl",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-kdl",
-      "rev": "b37e3d58e5c5cf8d739b315d6114e02d42e66664"
+      "rev": "b37e3d58e5c5cf8d739b315d6114e02d42e66664",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "kitty",
       "repo": "https://github.com/OXY2DEV/tree-sitter-kitty",
-      "rev": "f821c16397ffab5b776d8781245215811438a624"
+      "rev": "f821c16397ffab5b776d8781245215811438a624",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "kos",
       "repo": "https://github.com/kos-lang/tree-sitter-kos",
-      "rev": "03b261c1a78b71c38cf4616497f253c4a4ce118b"
+      "rev": "03b261c1a78b71c38cf4616497f253c4a4ce118b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "kotlin",
       "repo": "https://github.com/fwcd/tree-sitter-kotlin",
-      "rev": "57fb4560ba8641865bc0baa6b3f413b236112c4c"
+      "rev": "57fb4560ba8641865bc0baa6b3f413b236112c4c",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "koto",
       "repo": "https://github.com/koto-lang/tree-sitter-koto",
-      "rev": "f8b3f62c0eed185dca1559789e78759d4bee60e5"
+      "rev": "f8b3f62c0eed185dca1559789e78759d4bee60e5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "kusto",
       "repo": "https://github.com/Willem-J-an/tree-sitter-kusto",
       "rev": "8353a1296607d6ba33db7c7e312226e5fc83e8ce",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "lalrpop",
       "repo": "https://github.com/traxys/tree-sitter-lalrpop",
-      "rev": "27b0f7bb55b4cabd8f01a933d9ee6a49dbfc2192"
+      "rev": "27b0f7bb55b4cabd8f01a933d9ee6a49dbfc2192",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "latex",
       "repo": "https://github.com/latex-lsp/tree-sitter-latex",
       "rev": "7e0ecdc02926c7b9b2e0c76003d4fe7b0944f957",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "ledger",
       "repo": "https://github.com/cbarrete/tree-sitter-ledger",
       "rev": "96c92d4908a836bf8f661166721c98439f8afb80",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "leo",
       "repo": "https://github.com/r001/tree-sitter-leo",
-      "rev": "6bc5564917edacd070afc4d33cf5e2e677831ea9"
+      "rev": "6bc5564917edacd070afc4d33cf5e2e677831ea9",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "liquid",
       "repo": "https://github.com/hankthetank27/tree-sitter-liquid",
-      "rev": "d6ebde3974742cd1b61b55d1d94aab1dacb41056"
+      "rev": "d6ebde3974742cd1b61b55d1d94aab1dacb41056",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "linkerscript",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-linkerscript",
-      "rev": "f99011a3554213b654985a4b0a65b3b032ec4621"
+      "rev": "f99011a3554213b654985a4b0a65b3b032ec4621",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "liquidsoap",
       "repo": "https://github.com/savonet/tree-sitter-liquidsoap",
-      "rev": "d092c65598e940564e12214ff7c2097528cfa159"
+      "rev": "d092c65598e940564e12214ff7c2097528cfa159",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "llvm",
       "repo": "https://github.com/benwilliamgraham/tree-sitter-llvm",
-      "rev": "2914786ae6774d4c4e25a230f4afe16aa68fe1c1"
+      "rev": "2914786ae6774d4c4e25a230f4afe16aa68fe1c1",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "lua",
-      "repo": "https://github.com/MunifTanjim/tree-sitter-lua",
-      "rev": "4fbec840c34149b7d5fe10097c93a320ee4af053"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-lua",
+      "rev": "816840c592ab973500ae9750763c707b447e7fef",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "luadoc",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-luadoc",
-      "rev": "873612aadd3f684dd4e631bdf42ea8990c57634e"
+      "rev": "873612aadd3f684dd4e631bdf42ea8990c57634e",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "luap",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-luap",
-      "rev": "c134aaec6acf4fa95fe4aa0dc9aba3eacdbbe55a"
+      "rev": "c134aaec6acf4fa95fe4aa0dc9aba3eacdbbe55a",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "luau",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-luau",
-      "rev": "a8914d6c1fc5131f8e1c13f769fa704c9f5eb02f"
+      "rev": "a8914d6c1fc5131f8e1c13f769fa704c9f5eb02f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "m68k",
       "repo": "https://github.com/grahambates/tree-sitter-m68k",
       "rev": "e128454c2210c0e0c10b68fe45ddb8fee80182a3",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "magik",
       "repo": "https://github.com/krn-robin/tree-sitter-magik",
-      "rev": "0f4f51d372f8f81424e8e5ebf16dab95e8696db6"
+      "rev": "0f4f51d372f8f81424e8e5ebf16dab95e8696db6",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "make",
-      "repo": "https://github.com/alemuller/tree-sitter-make",
-      "rev": "a4b9187417d6be349ee5fd4b6e77b4172c6827dd"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-make",
+      "rev": "5e9e8f8ff3387b0edcaa90f46ddf3629f4cfeb1d",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "markdown",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-markdown",
       "rev": "da063e1ba4303ff08781eb440cc9a7bd41e55dd8",
+      "branch": "split_parser",
       "path": "tree-sitter-markdown",
-      "branch": "split_parser"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "markdown_inline",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-markdown",
       "rev": "da063e1ba4303ff08781eb440cc9a7bd41e55dd8",
+      "branch": "split_parser",
       "path": "tree-sitter-markdown-inline",
-      "branch": "split_parser"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "matlab",
       "repo": "https://github.com/acristoffers/tree-sitter-matlab",
-      "rev": "f3eef66526fdae0469207d8e561fb5771eea1721"
+      "rev": "f3eef66526fdae0469207d8e561fb5771eea1721",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/neovim/highlights.scm"
     },
     {
       "name": "menhir",
       "repo": "https://github.com/Kerl13/tree-sitter-menhir",
       "rev": "be8866a6bcc2b563ab0de895af69daeffa88fe70",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "mermaid",
       "repo": "https://github.com/monaqa/tree-sitter-mermaid",
       "rev": "90ae195b31933ceb9d079abfa8a3ad0a36fee4cc",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "meson",
-      "repo": "https://github.com/Decodetalkers/tree-sitter-meson",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-meson",
       "rev": "c84f3540624b81fc44067030afce2ff78d6ede05",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "mlir",
       "repo": "https://github.com/artagnon/tree-sitter-mlir",
       "rev": "4ab28ecdacef343af56c09b7981580503e49fadb",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "muttrc",
       "repo": "https://github.com/neomutt/tree-sitter-muttrc",
-      "rev": "173b0ab53a9c07962c9777189c4c70e90f1c1837"
+      "rev": "173b0ab53a9c07962c9777189c4c70e90f1c1837",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "nasm",
       "repo": "https://github.com/naclsn/tree-sitter-nasm",
-      "rev": "d1b3638d017f2a8585e26dcfc66fe1df94185e30"
+      "rev": "d1b3638d017f2a8585e26dcfc66fe1df94185e30",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "netlinx",
       "repo": "https://github.com/Norgate-AV/tree-sitter-netlinx",
-      "rev": "1c166a97a3481f385136394b950d9556d28af7b8"
+      "rev": "1c166a97a3481f385136394b950d9556d28af7b8",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "nginx",
       "repo": "https://github.com/opa-oz/tree-sitter-nginx",
-      "rev": "47ade644d754cce57974aac44d2c9450e823d4f4"
+      "rev": "47ade644d754cce57974aac44d2c9450e823d4f4",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "nickel",
       "repo": "https://github.com/nickel-lang/tree-sitter-nickel",
-      "rev": "a0a5d98a6f0edb5d00a18e62e7d1d02a5607c391"
+      "rev": "a0a5d98a6f0edb5d00a18e62e7d1d02a5607c391",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "nim",
       "repo": "https://github.com/alaviss/tree-sitter-nim",
       "rev": "9b4ede21a6ca866d29263f6b66c070961bc622b4",
-      "branch": "main"
+      "branch": "main",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "nim_format_string",
       "repo": "https://github.com/aMOPel/tree-sitter-nim-format-string",
       "rev": "d45f75022d147cda056e98bfba68222c9c8eca3a",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "ninja",
       "repo": "https://github.com/alemuller/tree-sitter-ninja",
-      "rev": "0a95cfdc0745b6ae82f60d3a339b37f19b7b9267"
+      "rev": "0a95cfdc0745b6ae82f60d3a339b37f19b7b9267",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "nix",
       "repo": "https://github.com/nix-community/tree-sitter-nix",
       "rev": "eabf96807ea4ab6d6c7f09b671a88cd483542840",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "nqc",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-nqc",
-      "rev": "14e6da1627aaef21d2b2aa0c37d04269766dcc1d"
+      "rev": "14e6da1627aaef21d2b2aa0c37d04269766dcc1d",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "norg",
       "repo": "https://github.com/nvim-neorg/tree-sitter-norg",
-      "rev": "d89d95af13d409f30a6c7676387bde311ec4a2c8"
+      "rev": "d89d95af13d409f30a6c7676387bde311ec4a2c8",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "nu",
       "repo": "https://github.com/nushell/tree-sitter-nu",
-      "rev": "4c149627cc592560f77ead1c384e27ec85926407"
+      "rev": "4c149627cc592560f77ead1c384e27ec85926407",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/nu/highlights.scm"
     },
     {
       "name": "objc",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-objc",
-      "rev": "181a81b8f23a2d593e7ab4259981f50122909fda"
+      "rev": "181a81b8f23a2d593e7ab4259981f50122909fda",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "objdump",
       "repo": "https://github.com/ColinKennedy/tree-sitter-objdump",
       "rev": "28d3b2e25a0b1881d1b47ed1924ca276c7003d45",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ocaml",
       "repo": "https://github.com/tree-sitter/tree-sitter-ocaml",
       "rev": "3ef7c00b29e41e3a0c1d18e82ea37c64d72b93fc",
+      "branch": "master",
       "path": "grammars/ocaml",
-      "branch": "master"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../../Cargo.toml"
     },
     {
       "name": "ocaml_interface",
       "repo": "https://github.com/tree-sitter/tree-sitter-ocaml",
       "rev": "3ef7c00b29e41e3a0c1d18e82ea37c64d72b93fc",
+      "branch": "master",
       "path": "grammars/interface",
-      "branch": "master"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../../Cargo.toml"
     },
     {
       "name": "ocamllex",
       "repo": "https://github.com/atom-ocaml/tree-sitter-ocamllex",
       "rev": "33722b8be73079946a7c6dd9598e3f57956ed36d",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "odin",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-odin",
-      "rev": "d2ca8efb4487e156a60d5bd6db2598b872629403"
-    },
-    {
-      "name": "org",
-      "repo": "https://github.com/milisims/tree-sitter-org",
-      "rev": "64cfbc213f5a83da17632c95382a5a0a2f3357c1"
+      "rev": "d2ca8efb4487e156a60d5bd6db2598b872629403",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "pascal",
       "repo": "https://github.com/Isopod/tree-sitter-pascal",
       "rev": "042119eca2e18a60e56317fb06ee3ba5c32cb447",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "passwd",
       "repo": "https://github.com/ath3/tree-sitter-passwd",
-      "rev": "20239395eacdc2e0923a7e5683ad3605aee7b716"
+      "rev": "20239395eacdc2e0923a7e5683ad3605aee7b716",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "pem",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-pem",
-      "rev": "e525b177a229b1154fd81bc0691f943028d9e685"
+      "rev": "e525b177a229b1154fd81bc0691f943028d9e685",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "perl",
       "repo": "https://github.com/tree-sitter-perl/tree-sitter-perl",
-      "rev": "ad74e6db234c35d537de9358799a8e0cc4f5dee0",
-      "branch": "release"
+      "rev": "0c24d001dd1921e418fb933d208a7bd7dd3f923a",
+      "branch": "release",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "pgn",
       "repo": "https://github.com/rolandwalker/tree-sitter-pgn",
       "rev": "b55128fe93d2b8a5d1edc1ce7de9252d2ea7ed35",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "php",
       "repo": "https://github.com/tree-sitter/tree-sitter-php",
       "rev": "7d07b41ce2d442ca9a90ed85d0075eccc17ae315",
-      "path": "php"
+      "path": "php",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml"
     },
     {
       "name": "php_only",
       "repo": "https://github.com/tree-sitter/tree-sitter-php",
       "rev": "7d07b41ce2d442ca9a90ed85d0075eccc17ae315",
-      "path": "php_only"
+      "path": "php_only",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml"
     },
     {
       "name": "phpdoc",
       "repo": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
       "rev": "12d50307e6c02e5f4f876fa6cf2edea1f7808c0d",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "pioasm",
       "repo": "https://github.com/leo60228/tree-sitter-pioasm",
-      "rev": "afece58efdb30440bddd151ef1347fa8d6f744a9"
+      "rev": "afece58efdb30440bddd151ef1347fa8d6f744a9",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "pkl",
       "repo": "https://github.com/apple/tree-sitter-pkl",
-      "rev": "d9c591b4e770934fe15c2f1b3658f35553f6cb40"
+      "rev": "d9c591b4e770934fe15c2f1b3658f35553f6cb40",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "po",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-po",
-      "rev": "bd860a0f57f697162bf28e576674be9c1500db5e"
+      "rev": "bd860a0f57f697162bf28e576674be9c1500db5e",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "pod",
       "repo": "https://github.com/tree-sitter-perl/tree-sitter-pod",
-      "rev": "71244084e61c9bb17b1730caefc232dd981b45c4"
+      "rev": "0bf8387987c21bf2f8ed41d2575a8f22b139687f",
+      "branch": "release",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "poe_filter",
-      "repo": "https://github.com/ObserverOfTime/tree-sitter-poe-filter",
-      "rev": "205a7d576984feb38a9fc2d8cfe729617f9e0548"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-poe-filter",
+      "rev": "205a7d576984feb38a9fc2d8cfe729617f9e0548",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "pony",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-pony",
-      "rev": "73ff874ae4c9e9b45462673cbc0a1e350e2522a7"
+      "rev": "73ff874ae4c9e9b45462673cbc0a1e350e2522a7",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "powershell",
       "repo": "https://github.com/airbus-cert/tree-sitter-powershell",
-      "rev": "7212f47716ced384ac012b2cc428fd9f52f7c5d4"
+      "rev": "7212f47716ced384ac012b2cc428fd9f52f7c5d4",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "printf",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-printf",
-      "rev": "ec4e5674573d5554fccb87a887c97d4aec489da7"
+      "rev": "ec4e5674573d5554fccb87a887c97d4aec489da7",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "prisma",
-      "repo": "https://github.com/LumaKernel/tree-sitter-prisma",
-      "rev": "f1c30d82a5bf0b70ce33ef431f4acd7fd69968a3",
-      "branch": "master"
+      "repo": "https://github.com/victorhqc/tree-sitter-prisma",
+      "rev": "3556b2c1f20ec9ac91e92d32c43d9d2a0ca3cc49",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "problog",
       "repo": "https://github.com/foxyseta/tree-sitter-prolog",
+      "rev": "d8d415f6a1cf80ca138524bcc395810b176d40fa",
       "path": "grammars/problog",
-      "rev": "d8d415f6a1cf80ca138524bcc395810b176d40fa"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "prolog",
       "repo": "https://github.com/foxyseta/tree-sitter-prolog",
+      "rev": "d8d415f6a1cf80ca138524bcc395810b176d40fa",
       "path": "grammars/prolog",
-      "rev": "d8d415f6a1cf80ca138524bcc395810b176d40fa"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "promql",
       "repo": "https://github.com/MichaHoffmann/tree-sitter-promql",
-      "rev": "77625d78eebc3ffc44d114a07b2f348dff3061b0"
+      "rev": "77625d78eebc3ffc44d114a07b2f348dff3061b0",
+      "has_rust_bindings": false
     },
     {
       "name": "properties",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-properties",
-      "rev": "6310671b24d4e04b803577b1c675d765cbd5773b"
+      "rev": "6310671b24d4e04b803577b1c675d765cbd5773b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "proto",
-      "repo": "https://github.com/coder3101/tree-sitter-proto",
-      "rev": "3ef027b83540c1c161bea64257654ab3d198ad54"
+      "repo": "https://github.com/treywood/tree-sitter-proto",
+      "rev": "e9f6b43f6844bd2189b50a422d4e2094313f6aa3",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "prql",
       "repo": "https://github.com/PRQL/tree-sitter-prql",
-      "rev": "09e158cd3650581c0af4c49c2e5b10c4834c8646"
+      "rev": "09e158cd3650581c0af4c49c2e5b10c4834c8646",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "psv",
-      "repo": "https://github.com/amaanq/tree-sitter-csv",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
       "rev": "f6bf6e35eb0b95fbadea4bb39cb9709507fcb181",
+      "branch": "master",
       "path": "psv",
-      "branch": "master"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "pug",
       "repo": "https://github.com/zealot128/tree-sitter-pug",
       "rev": "13e9195370172c86a8b88184cc358b23b677cc46",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "puppet",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-puppet",
-      "rev": "15f192929b7d317f5914de2b4accd37b349182a6"
+      "rev": "15f192929b7d317f5914de2b4accd37b349182a6",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "purescript",
       "repo": "https://github.com/postsolar/tree-sitter-purescript",
-      "rev": "f541f95ffd6852fbbe88636317c613285bc105af"
+      "rev": "f541f95ffd6852fbbe88636317c613285bc105af",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "pymanifest",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-pymanifest",
-      "rev": "debbdb83fe6356adc7261c41c69b45ba49c97294"
+      "rev": "debbdb83fe6356adc7261c41c69b45ba49c97294",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "python",
       "repo": "https://github.com/tree-sitter/tree-sitter-python",
-      "rev": "26855eabccb19c6abf499fbc5b8dc7cc9ab8bc64",
-      "branch": "master"
+      "rev": "v0.25.0",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ql",
       "repo": "https://github.com/tree-sitter/tree-sitter-ql",
-      "rev": "1fd627a4e8bff8c24c11987474bd33112bead857"
+      "rev": "1fd627a4e8bff8c24c11987474bd33112bead857",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "qmldir",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-qmldir",
-      "rev": "6b2b5e41734bd6f07ea4c36ac20fb6f14061c841"
+      "rev": "6b2b5e41734bd6f07ea4c36ac20fb6f14061c841",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "qmljs",
       "repo": "https://github.com/yuja/tree-sitter-qmljs",
       "rev": "0bec4359a7eb2f6c9220cd57372d87d236f66d59",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "query",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-query",
-      "rev": "6350ad724e7b17a7eea712d4860b4d2ae892e0b6"
+      "rev": "6350ad724e7b17a7eea712d4860b4d2ae892e0b6",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/query/highlights.scm"
     },
     {
       "name": "r",
       "repo": "https://github.com/r-lib/tree-sitter-r",
-      "rev": "0e6ef7741712c09dc3ee6e81c42e919820cc65ef"
+      "rev": "0e6ef7741712c09dc3ee6e81c42e919820cc65ef",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "racket",
       "repo": "https://github.com/6cdh/tree-sitter-racket",
-      "rev": "56b57807f86aa4ddb14892572b318edd4bc90ebe"
+      "rev": "56b57807f86aa4ddb14892572b318edd4bc90ebe",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ralph",
       "repo": "https://github.com/alephium/tree-sitter-ralph",
       "rev": "f6d81bf7a4599c77388035439cf5801cd461ff77",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "rasi",
       "repo": "https://github.com/Fymyte/tree-sitter-rasi",
-      "rev": "e735c6881d8b475aaa4ef8f0a2bdfd825b438143"
+      "rev": "e735c6881d8b475aaa4ef8f0a2bdfd825b438143",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "razor",
       "repo": "https://github.com/tris203/tree-sitter-razor",
-      "rev": "fe46ce5ea7d844e53d59bc96f2175d33691c61c5"
+      "rev": "fe46ce5ea7d844e53d59bc96f2175d33691c61c5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "rbs",
       "repo": "https://github.com/joker1007/tree-sitter-rbs",
-      "rev": "5282e2f36d4109f5315c1d9486b5b0c2044622bb"
+      "rev": "5282e2f36d4109f5315c1d9486b5b0c2044622bb",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "re2c",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-re2c",
-      "rev": "c18a3c2f4b6665e35b7e50d6048ea3cff770c572"
+      "rev": "c18a3c2f4b6665e35b7e50d6048ea3cff770c572",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "readline",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-readline",
-      "rev": "6b744c527aebd12e46a5ecb3aebdb8d621a8e83e"
+      "rev": "6b744c527aebd12e46a5ecb3aebdb8d621a8e83e",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "regex",
       "repo": "https://github.com/tree-sitter/tree-sitter-regex",
-      "rev": "b2ac15e27fce703d2f37a79ccd94a5c0cbe9720b"
+      "rev": "b2ac15e27fce703d2f37a79ccd94a5c0cbe9720b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "rego",
       "repo": "https://github.com/FallenAngel97/tree-sitter-rego",
-      "rev": "ddd39af81fe8b0288102a7cb97959dfce723e0f3"
+      "rev": "ddd39af81fe8b0288102a7cb97959dfce723e0f3",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "requirements",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-requirements",
-      "rev": "caeb2ba854dea55931f76034978de1fd79362939"
+      "rev": "caeb2ba854dea55931f76034978de1fd79362939",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "rescript",
       "repo": "https://github.com/rescript-lang/tree-sitter-rescript",
-      "rev": "5938ae1578aa559b4fa903f7cabc31da14f71c84"
+      "rev": "5938ae1578aa559b4fa903f7cabc31da14f71c84",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "rifleconf",
       "repo": "https://github.com/purarue/tree-sitter-rifleconf",
-      "rev": "6389ef0fc0d48f0397ec233109c074a0cb685e36"
+      "rev": "6389ef0fc0d48f0397ec233109c074a0cb685e36",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "rnoweb",
       "repo": "https://github.com/bamonroe/tree-sitter-rnoweb",
       "rev": "1a74dc0ed731ad07db39f063e2c5a6fe528cae7f",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "robot",
       "repo": "https://github.com/Hubro/tree-sitter-robot",
-      "rev": "e34def7cb0d8a66a59ec5057fe17bb4e6b17b56a"
+      "rev": "e34def7cb0d8a66a59ec5057fe17bb4e6b17b56a",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "robots_txt",
       "repo": "https://github.com/opa-oz/tree-sitter-robots-txt",
-      "rev": "0c066107e3548de79316a6a4ec771e2f7cf7c468"
+      "rev": "0c066107e3548de79316a6a4ec771e2f7cf7c468",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "roc",
       "repo": "https://github.com/faldor20/tree-sitter-roc",
       "rev": "40e52f343f1b1f270d6ecb2ca898ca9b8cba6936",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ron",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-ron",
-      "rev": "78938553b93075e638035f624973083451b29055"
+      "rev": "78938553b93075e638035f624973083451b29055",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "rst",
       "repo": "https://github.com/stsewd/tree-sitter-rst",
       "rev": "4e562e1598b95b93db4f3f64fe40ddefbc677a15",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "ruby",
       "repo": "https://github.com/tree-sitter/tree-sitter-ruby",
       "rev": "ab6dca77a8184abc94af6e3e82538741b5078d63",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "runescript",
       "repo": "https://github.com/2004Scape/tree-sitter-runescript",
-      "rev": "cf85bbd5da0c5ad243301d889c7f84d790a4cae4"
+      "rev": "cf85bbd5da0c5ad243301d889c7f84d790a4cae4",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "rush",
       "repo": "https://github.com/rush-rs/tree-sitter-rush",
-      "rev": "babbc5c116ce964e89bc9ccc9df36d16c623fba9"
+      "rev": "babbc5c116ce964e89bc9ccc9df36d16c623fba9",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/rush/highlights.scm"
     },
     {
       "name": "rust",
       "repo": "https://github.com/tree-sitter/tree-sitter-rust",
-      "rev": "261b20226c04ef601adbdf185a800512a5f66291"
+      "rev": "261b20226c04ef601adbdf185a800512a5f66291",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "scala",
       "repo": "https://github.com/tree-sitter/tree-sitter-scala",
       "rev": "97aead18d97708190a51d4f551ea9b05b60641c9",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "scfg",
       "repo": "https://github.com/rockorager/tree-sitter-scfg",
-      "rev": "d850fd470445d73de318a21d734d1e09e29b773c"
+      "rev": "d850fd470445d73de318a21d734d1e09e29b773c",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "scheme",
       "repo": "https://github.com/6cdh/tree-sitter-scheme",
-      "rev": "b5c701148501fa056302827442b5b4956f1edc03"
+      "rev": "b5c701148501fa056302827442b5b4956f1edc03",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "scss",
-      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-scss",
-      "rev": "bca847c1410f7dd97e13fbe7838b3c2c203fb473"
+      "repo": "https://github.com/serenadeai/tree-sitter-scss",
+      "rev": "c478c6868648eff49eb04a4df90d703dc45b312a",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "sflog",
       "repo": "https://github.com/aheber/tree-sitter-sfapex",
       "rev": "3597575a429766dd7ecce9f5bb97f6fec4419d5d",
-      "path": "sflog"
+      "path": "sflog",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "slim",
       "repo": "https://github.com/theoo/tree-sitter-slim",
-      "rev": "a06113f5175b805a37d20df0a6f9d722e0ab6cfe"
+      "rev": "a06113f5175b805a37d20df0a6f9d722e0ab6cfe",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "slint",
       "repo": "https://github.com/slint-ui/tree-sitter-slint",
       "rev": "10fb0f188d7950400773c06ba6c31075866e14bf",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "slang",
-      "repo": "https://github.com/theHamsta/tree-sitter-slang",
-      "rev": "1dbcc4abc7b3cdd663eb03d93031167d6ed19f56"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-slang",
+      "rev": "1dbcc4abc7b3cdd663eb03d93031167d6ed19f56",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "smali",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-smali",
-      "rev": "fdfa6a1febc43c7467aa7e937b87b607956f2346"
+      "rev": "fdfa6a1febc43c7467aa7e937b87b607956f2346",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "smithy",
       "repo": "https://github.com/indoorvivants/tree-sitter-smithy",
-      "rev": "ec4fe14586f2b0a1bc65d6db17f8d8acd8a90433"
+      "rev": "ec4fe14586f2b0a1bc65d6db17f8d8acd8a90433",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "snakemake",
       "repo": "https://github.com/osthomas/tree-sitter-snakemake",
-      "rev": "68010430c3e51c0e84c1ce21c6551df0e2469f51"
+      "rev": "68010430c3e51c0e84c1ce21c6551df0e2469f51",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/snakemake/highlights.scm"
     },
     {
       "name": "solidity",
       "repo": "https://github.com/JoranHonig/tree-sitter-solidity",
       "rev": "4e938a46c7030dd001bc99e1ac0f0c750ac98254",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "soql",
       "repo": "https://github.com/aheber/tree-sitter-sfapex",
+      "rev": "3597575a429766dd7ecce9f5bb97f6fec4419d5d",
       "path": "soql",
-      "rev": "3597575a429766dd7ecce9f5bb97f6fec4419d5d"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "sosl",
-      "path": "sosl",
       "repo": "https://github.com/aheber/tree-sitter-sfapex",
-      "rev": "3597575a429766dd7ecce9f5bb97f6fec4419d5d"
+      "rev": "3597575a429766dd7ecce9f5bb97f6fec4419d5d",
+      "path": "sosl",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "sourcepawn",
       "repo": "https://github.com/nilshelmig/tree-sitter-sourcepawn",
-      "rev": "5a8fdd446b516c81e218245c12129c6ad4bccfa2"
+      "rev": "5a8fdd446b516c81e218245c12129c6ad4bccfa2",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "sparql",
       "repo": "https://github.com/GordianDziwis/tree-sitter-sparql",
-      "rev": "1ef52d35a73a2a5f2e433ecfd1c751c1360a923b"
+      "rev": "1ef52d35a73a2a5f2e433ecfd1c751c1360a923b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "sproto",
       "repo": "https://github.com/hanxi/tree-sitter-sproto",
-      "rev": "d554c1456e35e7b2690552d52921c987d0cf6799"
+      "rev": "d554c1456e35e7b2690552d52921c987d0cf6799",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "sql",
-      "repo": "https://github.com/DerekStride/tree-sitter-sql",
-      "rev": "1c70b7db248983cc75a92a9846ac16b2aee32d65"
+      "repo": "https://github.com/derekstride/tree-sitter-sql",
+      "rev": "7b51ecda191d36b92f5a90a8d1bc3faef1c7b8b8",
+      "branch": "gh-pages",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "squirrel",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-squirrel",
-      "rev": "072c969749e66f000dba35a33c387650e203e96e"
+      "rev": "072c969749e66f000dba35a33c387650e203e96e",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ssh_config",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-ssh-config",
       "rev": "71d2693deadaca8cdc09e38ba41d2f6042da1616",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "starlark",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-starlark",
-      "rev": "a453dbf3ba433db0e5ec621a38a7e59d72e4dc69"
+      "rev": "a453dbf3ba433db0e5ec621a38a7e59d72e4dc69",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "strace",
       "repo": "https://github.com/sigmaSd/tree-sitter-strace",
       "rev": "ac874ddfcc08d689fee1f4533789e06d88388f29",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "styled",
       "repo": "https://github.com/mskelton/tree-sitter-styled",
-      "rev": "319cdcaa0346ba6db668a222d938e5c3569e2a51"
+      "rev": "319cdcaa0346ba6db668a222d938e5c3569e2a51",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "supercollider",
       "repo": "https://github.com/madskjeldgaard/tree-sitter-supercollider",
-      "rev": "76b3cab1773f08bb7d3a185420b0a44c6da8c294"
+      "rev": "76b3cab1773f08bb7d3a185420b0a44c6da8c294",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "superhtml",
       "repo": "https://github.com/kristoff-it/superhtml",
+      "rev": "8b5bb272b269afdd38cdf641c4a707dd92fbe902",
       "path": "tree-sitter-superhtml",
-      "rev": "8b5bb272b269afdd38cdf641c4a707dd92fbe902"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "surface",
       "repo": "https://github.com/connorlay/tree-sitter-surface",
-      "rev": "f4586b35ac8548667a9aaa4eae44456c1f43d032"
+      "rev": "f4586b35ac8548667a9aaa4eae44456c1f43d032",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "svelte",
-      "repo": "https://github.com/Himujjal/tree-sitter-svelte",
-      "rev": "60ea1d673a1a3eeeb597e098d9ada9ed0c79ef4b",
-      "branch": "master"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-svelte",
+      "rev": "ae5199db47757f785e43a14b332118a5474de1a2",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "sway",
       "repo": "https://github.com/FuelLabs/tree-sitter-sway.git",
       "rev": "9b7845ce06ecb38b040c3940970b4fd0adc331d1",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "swift",
       "repo": "https://github.com/alex-pinkus/tree-sitter-swift",
-      "rev": "c7287392d610ca9d7c80f9edd2c6ef8f518b377b"
+      "rev": "c7287392d610ca9d7c80f9edd2c6ef8f518b377b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "sxhkdrc",
       "repo": "https://github.com/RaafatTurki/tree-sitter-sxhkdrc",
       "rev": "440d5f913d9465c9c776a1bd92334d32febcf065",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "systemtap",
       "repo": "https://github.com/ok-ryoko/tree-sitter-systemtap",
-      "rev": "f2b378a9af0b7e1192cff67a5fb45508c927205d"
+      "rev": "f2b378a9af0b7e1192cff67a5fb45508c927205d",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "systemverilog",
       "repo": "https://github.com/gmlarumbe/tree-sitter-systemverilog",
       "rev": "7c4b01b7df2f6e7fa1f698c9d30ac8f93af18ed2",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "t32",
       "repo": "https://github.com/xasc/tree-sitter-t32",
-      "rev": "5b5e4336731bda5ea2e6b78b6a2d9e7a89032b75"
+      "rev": "5b5e4336731bda5ea2e6b78b6a2d9e7a89032b75",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "tablegen",
-      "repo": "https://github.com/Flakebi/tree-sitter-tablegen",
-      "rev": "3e9c4822ab5cdcccf4f8aa9dcd42117f736d51d9",
-      "branch": "master"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-tablegen",
+      "rev": "b1170880c61355aaf38fc06f4af7d3c55abdabc4",
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "tact",
       "repo": "https://github.com/tact-lang/tree-sitter-tact",
-      "rev": "a6267c2091ed432c248780cec9f8d42c8766d9ad"
+      "rev": "a6267c2091ed432c248780cec9f8d42c8766d9ad",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "tcl",
-      "repo": "https://github.com/lewis6991/tree-sitter-tcl",
-      "rev": "8f11ac7206a54ed11210491cee1e0657e2962c47"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
+      "rev": "8f11ac7206a54ed11210491cee1e0657e2962c47",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/tcl/highlights.scm"
     },
     {
       "name": "teal",
       "repo": "https://github.com/euclidianAce/tree-sitter-teal",
-      "rev": "05d276e737055e6f77a21335b7573c9d3c091e2f"
+      "rev": "05d276e737055e6f77a21335b7573c9d3c091e2f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "templ",
       "repo": "https://github.com/vrischmann/tree-sitter-templ",
       "rev": "1c6db04effbcd7773c826bded9783cbc3061bd55",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/templ/highlights.scm"
     },
     {
       "name": "tera",
       "repo": "https://github.com/uncenter/tree-sitter-tera",
-      "rev": "3a38c368e806268daac9923a27e72bcafbbc16bb"
+      "rev": "3a38c368e806268daac9923a27e72bcafbbc16bb",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "terraform",
-      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-hcl",
+      "repo": "https://github.com/MichaHoffmann/tree-sitter-hcl",
       "rev": "64ad62785d442eb4d45df3a1764962dafd5bc98b",
-      "path": "dialects/terraform"
+      "path": "dialects/terraform",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../../Cargo.toml"
     },
     {
       "name": "textproto",
       "repo": "https://github.com/PorterAtGoogle/tree-sitter-textproto",
-      "rev": "568471b80fd8793d37ed01865d8c2208a9fefd1b"
+      "rev": "568471b80fd8793d37ed01865d8c2208a9fefd1b",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "thrift",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-thrift",
-      "rev": "68fd0d80943a828d9e6f49c58a74be1e9ca142cf"
+      "rev": "68fd0d80943a828d9e6f49c58a74be1e9ca142cf",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "tiger",
       "repo": "https://github.com/ambroisie/tree-sitter-tiger",
-      "rev": "4a77b2d7a004587646bddc4e854779044b6db459"
+      "rev": "4a77b2d7a004587646bddc4e854779044b6db459",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "tlaplus",
       "repo": "https://github.com/tlaplus-community/tree-sitter-tlaplus",
-      "rev": "8d749f9a598b47b7110c7340006c8eb8a9552566"
+      "rev": "8d749f9a598b47b7110c7340006c8eb8a9552566",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "tmux",
       "repo": "https://github.com/Freed-Wu/tree-sitter-tmux",
-      "rev": "75d1b995b0c23400ac8e49db757a2e0386f9fa8f"
+      "rev": "75d1b995b0c23400ac8e49db757a2e0386f9fa8f",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "todotxt",
       "repo": "https://github.com/arnarg/tree-sitter-todotxt",
-      "rev": "3937c5cd105ec4127448651a21aef45f52d19609"
+      "rev": "3937c5cd105ec4127448651a21aef45f52d19609",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "toml",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-toml",
       "rev": "64b56832c2cffe41758f28e05c756a3a98d16f41",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "tsv",
-      "repo": "https://github.com/amaanq/tree-sitter-csv",
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
       "rev": "f6bf6e35eb0b95fbadea4bb39cb9709507fcb181",
+      "branch": "master",
       "path": "tsv",
-      "branch": "master"
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "tsx",
       "repo": "https://github.com/tree-sitter/tree-sitter-typescript",
       "rev": "75b3874edb2dc714fb1fd77a32013d0f8699989f",
-      "path": "tsx"
+      "path": "tsx",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml"
     },
     {
       "name": "turtle",
       "repo": "https://github.com/GordianDziwis/tree-sitter-turtle",
-      "rev": "7f789ea7ef765080f71a298fc96b7c957fa24422"
+      "rev": "7f789ea7ef765080f71a298fc96b7c957fa24422",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "twig",
       "repo": "https://github.com/gbprod/tree-sitter-twig",
-      "rev": "7195ee573ab5c3b3bb0e91b042e6f83ac1b11104"
+      "rev": "7195ee573ab5c3b3bb0e91b042e6f83ac1b11104",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "typescript",
       "repo": "https://github.com/tree-sitter/tree-sitter-typescript",
       "rev": "75b3874edb2dc714fb1fd77a32013d0f8699989f",
-      "path": "typescript"
+      "path": "typescript",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml"
     },
     {
       "name": "typespec",
       "repo": "https://github.com/happenslol/tree-sitter-typespec",
-      "rev": "395bef1e1eb4dd18365401642beb534e8a244056"
+      "rev": "395bef1e1eb4dd18365401642beb534e8a244056",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "typoscript",
       "repo": "https://github.com/Teddytrombone/tree-sitter-typoscript",
-      "rev": "1811c767f3f72be669891b524a07c58b1eb0db87"
+      "rev": "1811c767f3f72be669891b524a07c58b1eb0db87",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "typst",
       "repo": "https://github.com/uben0/tree-sitter-typst",
       "rev": "46cf4ded12ee974a70bf8457263b67ad7ee0379d",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/typst/highlights.scm"
     },
     {
       "name": "udev",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-udev",
-      "rev": "2fcb563a4d56a6b8e8c129252325fc6335e4acbf"
+      "rev": "2fcb563a4d56a6b8e8c129252325fc6335e4acbf",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ungrammar",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-ungrammar",
-      "rev": "debd26fed283d80456ebafa33a06957b0c52e451"
+      "rev": "debd26fed283d80456ebafa33a06957b0c52e451",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "unison",
       "repo": "https://github.com/kylegoetz/tree-sitter-unison",
       "rev": "169e7f748a540ec360c0cb086b448faad012caa4",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ursa",
       "repo": "https://github.com/ursalang/tree-sitter-ursa",
-      "rev": "2fc58a4398dafdfb8b79cd72afeff6f35a8ac9b5"
+      "rev": "2fc58a4398dafdfb8b79cd72afeff6f35a8ac9b5",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "usd",
       "repo": "https://github.com/ColinKennedy/tree-sitter-usd",
       "rev": "4e0875f724d94d0c2ff36f9b8cb0b12f8b20d216",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "uxntal",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-uxntal",
-      "rev": "ad9b638b914095320de85d59c49ab271603af048"
+      "rev": "ad9b638b914095320de85d59c49ab271603af048",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "v",
       "repo": "https://github.com/vlang/v-analyzer",
       "rev": "9cf6a37689f06b17d170dec644ace81eb8eab280",
-      "path": "tree_sitter_v"
+      "path": "tree_sitter_v",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "vala",
       "repo": "https://github.com/vala-lang/tree-sitter-vala",
       "rev": "97e6db3c8c73b15a9541a458d8e797a07f588ef4",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "vento",
       "repo": "https://github.com/ventojs/tree-sitter-vento",
-      "rev": "3b32474bc29584ea214e4e84b47102408263fe0e"
-    },
-    {
-      "name": "verilog",
-      "repo": "https://github.com/tree-sitter/tree-sitter-verilog",
-      "rev": "227d277b6a1a5e2bf818d6206935722a7503de08"
+      "rev": "3b32474bc29584ea214e4e84b47102408263fe0e",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "vhdl",
-      "repo": "https://github.com/alemuller/tree-sitter-vhdl",
-      "rev": "a3b2d84990527c7f8f4ae219c332c00c33d2d8e5"
+      "repo": "https://github.com/jpt13653903/tree-sitter-vhdl",
+      "rev": "674ed9fe6c13c79c0e7407daaf4518d053e6f0f4",
+      "has_rust_bindings": false
     },
     {
       "name": "vhs",
       "repo": "https://github.com/charmbracelet/tree-sitter-vhs",
-      "rev": "0c6fae9d2cfc5b217bfd1fe84a7678f5917116db"
+      "rev": "0c6fae9d2cfc5b217bfd1fe84a7678f5917116db",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "vim",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-vim",
-      "rev": "1cd0a0892b389bd314a9bd09545160e5ee3c9137"
+      "rev": "1cd0a0892b389bd314a9bd09545160e5ee3c9137",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/vim/highlights.scm"
     },
     {
       "name": "vimdoc",
       "repo": "https://github.com/neovim/tree-sitter-vimdoc",
       "rev": "f061895a0eff1d5b90e4fb60d21d87be3267031a",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/vimdoc/highlights.scm"
     },
     {
       "name": "vrl",
       "repo": "https://github.com/belltoy/tree-sitter-vrl",
-      "rev": "274b3ce63f72aa8ffea18e7fc280d3062d28f0ba"
+      "rev": "274b3ce63f72aa8ffea18e7fc280d3062d28f0ba",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "vue",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-vue",
-      "rev": "ce8011a414fdf8091f4e4071752efc376f4afb08"
+      "rev": "ce8011a414fdf8091f4e4071752efc376f4afb08",
+      "branch": "main",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/vue/highlights.scm"
     },
     {
       "name": "wast",
       "repo": "https://github.com/mkatychev/tree-sitter-wasm",
       "rev": "ec42b8446502783edad7f34cbfd0d9051ea672ee",
-      "path": "wast"
+      "path": "wast",
+      "has_rust_bindings": false
     },
     {
       "name": "wat",
       "repo": "https://github.com/mkatychev/tree-sitter-wasm",
       "rev": "ec42b8446502783edad7f34cbfd0d9051ea672ee",
-      "path": "wat"
+      "path": "wat",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/wat/highlights.scm",
+      "highlights_scm_repo": "https://github.com/rush-rs/tree-sitter-wasm-queries",
+      "highlights_scm_ref": "main"
     },
     {
       "name": "wgsl",
       "repo": "https://github.com/szebniok/tree-sitter-wgsl",
       "rev": "40259f3c77ea856841a4e0c4c807705f3e4a2b65",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "wgsl_bevy",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy",
       "rev": "d9306a798ede627001a8e5752f775858c8edd7e4",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "wing",
       "repo": "https://github.com/winglang/tree-sitter-wing",
-      "rev": "76e0c25844a66ebc6e866d690fcc5f4e90698947"
+      "rev": "76e0c25844a66ebc6e866d690fcc5f4e90698947",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "wit",
       "repo": "https://github.com/bytecodealliance/tree-sitter-wit",
-      "rev": "a80c1f47baa5bfb13e2b5f49aa5304e3dab94948"
+      "rev": "v1.2.0",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "wxml",
       "repo": "https://github.com/BlockLune/tree-sitter-wxml",
-      "rev": "7b821c748dc410332f59496c0dea2632168c4e5a"
+      "rev": "7b821c748dc410332f59496c0dea2632168c4e5a",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "xcompose",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
-      "rev": "a51d6366f041dbefec4da39a7eb3168a9b1cbc0e"
+      "rev": "a51d6366f041dbefec4da39a7eb3168a9b1cbc0e",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "xml",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
       "rev": "5000ae8f22d11fbe93939b05c1e37cf21117162d",
-      "path": "xml"
+      "path": "xml",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "../Cargo.toml"
     },
     {
       "name": "xresources",
       "repo": "https://github.com/ValdezFOmar/tree-sitter-xresources",
       "rev": "a81f1ea4478d03c223ef7eace535a36220bddd8c",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/xresources/highlights.scm"
     },
     {
       "name": "yaml",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-yaml",
-      "rev": "7708026449bed86239b1cd5bce6e3c34dbca6415"
+      "rev": "7708026449bed86239b1cd5bce6e3c34dbca6415",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "yang",
       "repo": "https://github.com/Hubro/tree-sitter-yang",
       "rev": "2c0e6be8dd4dcb961c345fa35c309ad4f5bd3502",
-      "branch": "master"
+      "branch": "master",
+      "has_rust_bindings": false,
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "yuck",
       "repo": "https://github.com/tree-sitter-grammars/tree-sitter-yuck",
-      "rev": "e877f6ade4b77d5ef8787075141053631ba12318"
+      "rev": "e877f6ade4b77d5ef8787075141053631ba12318",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "zathurarc",
       "repo": "https://github.com/Freed-Wu/tree-sitter-zathurarc",
-      "rev": "0554b4a5d313244b7fc000cbb41c04afae4f4e31"
+      "rev": "0554b4a5d313244b7fc000cbb41c04afae4f4e31",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml"
     },
     {
       "name": "zig",
-      "repo": "https://github.com/maxxnino/tree-sitter-zig",
-      "rev": "a80a6e9be81b33b182ce6305ae4ea28e29211bd5"
+      "repo": "https://github.com/tree-sitter-grammars/tree-sitter-zig",
+      "rev": "6479aa13f32f701c383083d8b28360ebd682fb7d",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ziggy",
       "repo": "https://github.com/kristoff-it/ziggy",
-      "rev": "852053b09a5f8f5b79ca880f86ea77fc7da3dd6c",
-      "path": "tree-sitter-ziggy"
+      "rev": "4353b20ef2ac750e35c6d68e4eb2a07c2d7cf901",
+      "path": "tree-sitter-ziggy",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "ziggy_schema",
       "repo": "https://github.com/kristoff-it/ziggy",
-      "rev": "852053b09a5f8f5b79ca880f86ea77fc7da3dd6c",
-      "path": "tree-sitter-ziggy-schema"
+      "rev": "4353b20ef2ac750e35c6d68e4eb2a07c2d7cf901",
+      "path": "tree-sitter-ziggy-schema",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     },
     {
       "name": "zsh",
       "repo": "https://github.com/georgeharker/tree-sitter-zsh",
-      "rev": "98e4f32897c36c5ead33a7583617c64f5ff0ae68"
+      "rev": "v0.53.0",
+      "has_rust_bindings": true,
+      "cargo_toml_path": "Cargo.toml",
+      "highlights_scm_path": "queries/highlights.scm"
     }
   ]
 }
