@@ -138,7 +138,7 @@ fn generate_bindings(out_path: &Path, compiled_grammars: &[Grammar]) {
             grammar.name.replace("-", "_")
         };
         bindings.push_str(&format!(
-            "extern \"C\" {{ fn tree_sitter_{}() -> *const (); }}\n",
+            "unsafe extern \"C\" {{ fn tree_sitter_{}() -> *const (); }}\n",
             fn_name
         ));
     }
