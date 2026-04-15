@@ -2233,7 +2233,7 @@
     {
       "name": "sql",
       "repo": "https://github.com/derekstride/tree-sitter-sql",
-      "rev": "7b51ecda191d36b92f5a90a8d1bc3faef1c7b8b8",
+      "rev": "4afe285bb142542cee0aa7b689fec00a71df4741",
       "branch": "gh-pages",
       "has_rust_bindings": true,
       "cargo_toml_path": "Cargo.toml",
