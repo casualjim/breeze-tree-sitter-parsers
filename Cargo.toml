@@ -1,0 +1,19 @@
+[workspace]
+resolver = "2"
+members = [
+    "breeze-tree-sitter-parsers-sys",
+    "validation",
+]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/casualjim/breeze-tree-sitter-parsers"
+homepage = "https://github.com/casualjim/breeze-tree-sitter-parsers"
+
+[workspace.dependencies]
+tree-sitter = "0.26"
+tree-sitter-language = "0.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = { version = "2", default-features = false, features = ["tls"] }

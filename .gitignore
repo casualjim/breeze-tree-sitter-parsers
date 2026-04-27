@@ -2,6 +2,7 @@
 # grammars/
 dist/
 binaries/
+target/
 
 # Platform package binaries (symlinks during development)
 platforms/*/libtree-sitter-*.a

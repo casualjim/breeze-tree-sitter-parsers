@@ -1,0 +1,30 @@
+[package]
+name = "breeze-tree-sitter-parsers-sys"
+version = "0.1.12"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Pre-built tree-sitter parsers for 342 languages, distributed as a single static library. Downloads matching artifact from breeze-tree-sitter-parsers GitHub releases at build time."
+keywords = ["tree-sitter", "parser", "syntax", "highlighting"]
+categories = ["parsing", "external-ffi-bindings"]
+links = "tree-sitter-parsers-all"
+build = "build.rs"
+include = [
+    "build.rs",
+    "src/**/*",
+    "README.md",
+    "LICENSE*",
+]
+
+[lib]
+name = "breeze_tree_sitter_parsers_sys"
+
+[dependencies]
+tree-sitter.workspace = true
+tree-sitter-language.workspace = true
+
+[build-dependencies]
+serde.workspace = true
+serde_json.workspace = true
+ureq.workspace = true
