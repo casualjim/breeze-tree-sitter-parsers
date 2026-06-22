@@ -157,6 +157,20 @@ async function runCommand(cmd, args, options = {}) {
   });
 }
 
+async function stripArchive(archivePath) {
+  // Use Zig's LLVM objcopy, which understands all target object formats
+  // (ELF, Mach-O, COFF) and ar archive members regardless of build host.
+  // Native strip is host-format-bound: GNU strip on a Linux host cannot
+  // strip Mach-O members, which corrupts cross-compiled macOS archives.
+  try {
+    await runCommand('zig', ['objcopy', '--strip-debug', archivePath]);
+    return { success: true, command: `zig objcopy --strip-debug ${archivePath}` };
+  } catch (error) {
+    const detail = error.stderr || error.stdout || error.message || 'Unknown error';
+    return { success: false, errors: [`zig objcopy --strip-debug ${archivePath} -> ${String(detail).trim()}`] };
+  }
+}
+
 async function fetchGrammar(grammar, cacheDir) {
   const name = grammar.name;
   const repo = grammar.repo;
@@ -744,9 +758,17 @@ async function main() {
           await runCommand(arCmd[0], arCmd.slice(1));
           console.log(`  Created combined archive: ${path.basename(combinedLib)}`);
 
-          // Strip debug symbols from combined archive
+          // Strip debug symbols from combined archive (best effort)
           console.log(`  Stripping debug symbols...`);
-          await runCommand('strip', ['--strip-debug', combinedLib]);
+          const stripResult = await stripArchive(combinedLib);
+          if (!stripResult.success) {
+            console.warn('  Warning: Failed to strip debug symbols; continuing with unstripped archive.');
+            for (const error of stripResult.errors) {
+              console.warn(`    ${error}`);
+            }
+          } else {
+            console.log(`  Stripped with: ${stripResult.command}`);
+          }
 
           // Clean up temporary files
           fs.rmSync(tempObjDir, { recursive: true, force: true });
